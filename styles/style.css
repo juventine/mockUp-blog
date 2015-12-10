@@ -185,10 +185,6 @@ header{
   text-decoration: underline;
 }
 
-.post-date-author, .post-social{
-  align-items: center;
-}
-
 .post-social ul{
   display: flex;
 }
