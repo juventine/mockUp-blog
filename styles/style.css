@@ -127,7 +127,7 @@ header{
 
 .post{
   width: 640px;
-  margin-bottom: 39px;
+  margin: 0 0 39px;
 }
 
 .post-image{
@@ -291,7 +291,7 @@ aside{
 }
 
 aside section{
-  margin: 0 0 32px 0;
+  margin: 0 0 32px;
 }
 
 .title{
