@@ -102,22 +102,31 @@ header{
   text-decoration: none;
 }
 
+.navbar .active-tab:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -12px;
+  left: 50%;
+  margin-left: -15px;
+  border-style: solid;
+  border-width: 12px 15px 0 15px;
+  border-color: #c6defa transparent transparent transparent;
+}
+
 .navbar .active-tab:after{
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  bottom: -18px;
+  width: 0;
+  height: 0;
+  bottom: -7px;
   left: 50%;
-  margin-left: -15px;
-  border-width: 4px;
+  margin-left: -8px;
   border-style: solid;
-  border-color: transparent transparent #c6defa #c6defa;
-  background-color: #6b9acf;
-  transform-origin: 0 0;
-  transform: rotate(-45deg);
+  border-width: 7px 8.5px 0 8.5px;
+  border-color: #6b9acf transparent transparent transparent;
 }
-
 /*end styles for header*/
 
 /*start styles for content*/
