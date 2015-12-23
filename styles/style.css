@@ -81,7 +81,7 @@ header{
 }
 
 .navbar li {
-  display: inline-block;
+  display: inline-flex;
   padding: 3px 0;
 }
 
@@ -138,11 +138,11 @@ header{
 }
 
 .posts{
+  width: 640px;
   margin: 0 28px 0 0;
 }
 
 .post{
-  width: 640px;
   margin: 0 0 39px;
 }
 
