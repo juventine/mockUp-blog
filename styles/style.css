@@ -77,19 +77,15 @@ header{
 }
 
 .navbar li {
-  position: relative;
   display: inline-block;
   padding: 3px 0;
-  line-height: 52px;
 }
 
 .navbar a{
   display: block;
   position: relative;
-  z-index: 9;
-  height: 47px;
-  min-width: 92px;
-  padding: 0 10px;
+/*  min-width: 92px;*/
+  padding: 17px 10px 14px;
   text-decoration: none;
   color: #fff;
   font-family: "Arial-Narrow";
@@ -107,7 +103,7 @@ header{
   position: absolute;
   width: 0;
   height: 0;
-  bottom: -12px;
+  bottom: -15px;
   left: 50%;
   margin-left: -15px;
   border-style: solid;
@@ -120,7 +116,7 @@ header{
   position: absolute;
   width: 0;
   height: 0;
-  bottom: -7px;
+  bottom: -10px;
   left: 50%;
   margin-left: -8px;
   border-style: solid;
@@ -374,10 +370,11 @@ aside p{
   position: absolute;
   top: 5px;
   right: 0px;
-  width: 7px;
-  height: 7px;
-  border-radius: 7px;
-  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  background-image: url('../images/spritesheet.png');
+  background-repeat: no-repeat;
+  background-position: 0px -35px;
 }
 
 .tags a:after{
