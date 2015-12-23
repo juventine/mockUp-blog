@@ -68,12 +68,16 @@ header{
 }
 
 .navbar{
+  display: flex;
+  justify-content: center;
+  background: #6b9acf;
   border-bottom: 4px solid #c6defa;
 }
 
 .navbar ul{
-  background: #6b9acf;
-  text-align: center;
+  display: flex;
+  flex-basis: 580px;
+  justify-content: space-between;
 }
 
 .navbar li {
