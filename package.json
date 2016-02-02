@@ -1,0 +1,16 @@
+{
+  "author": "Andrei",
+  "name": "pdp-project",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-remove-logging": "latest",
+    "grunt-contrib-less": "^1.1.0"
+  },
+  "devDependencies": {
+    "grunt-autoprefixer": "^3.0.3"
+  }
+}

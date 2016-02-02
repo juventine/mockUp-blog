@@ -1,0 +1,108 @@
+@import "reset.css";
+/* start including of fonts*/
+@font-face {
+  font-family: "Arial-Narrow";
+  src: url('../fonts/arial-narrow.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Arial-Regular";
+  src: url('../fonts/Arial-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: "TrendSansOne";
+  src: url('../fonts/trendsansone-webfont.eot');
+  src: url('../fonts/trendsansone-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/trendsansone-webfont.woff2') format("woff2"), url('../fonts/trendsansone-webfont.woff') format("woff"), url('../fonts/trendsansone-webfont.ttf') format("truetype"), url('../fonts/trendsansone-webfont.svg#trend_sansone') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*end including of fonts*/
+/*start variables*/
+/*end variables*/
+/*start styles for mixins*/
+/*end styles for mixins*/
+html {
+  min-height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 12px;
+  background: #ffffff;
+}
+a {
+  cursor: pointer;
+}
+/*start styles for helper classes*/
+.clearfix:after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.sprite {
+  background-image: url('../images/spritesheet.png');
+  background-repeat: no-repeat;
+}
+/*end styles for helper classes*/
+/*start styles for header*/
+header {
+  margin: 0 0 50px;
+}
+header .logo {
+  padding: 10px 0 15px 0;
+  text-align: center;
+}
+header .logo a {
+  display: inline-block;
+}
+header .navbar {
+  border-bottom: 4px solid #c6defa;
+}
+header .navbar ul {
+  background: #6b9acf;
+  text-align: center;
+}
+header .navbar ul li {
+  display: inline-block;
+  padding: 3px 0;
+}
+header .navbar ul li .active-tab:before {
+  content: '';
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -15px;
+  border-style: solid;
+  border-color: #c6defa transparent transparent transparent;
+  border-width: 12px 15px 0 15px;
+}
+header .navbar ul li .active-tab:after {
+  content: '';
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -8px;
+  border-style: solid;
+  border-color: #6b9acf transparent transparent transparent;
+  border-width: 7px 8.5px 0 8.5px;
+}
+header .navbar ul li a {
+  display: block;
+  position: relative;
+  padding: 17px 10px 14px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Arial-Narrow";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+header .navbar ul li a:hover {
+  background-color: #7CA7D9;
+  text-decoration: none;
+}
+/*end styles for header*/
+/*start styles for content*/
