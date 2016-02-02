@@ -37,6 +37,7 @@ a {
   content: '';
   width: 0;
   height: 0;
+  position: static;
   display: block;
   clear: both;
   visibility: hidden;
@@ -60,18 +61,11 @@ header .logo a {
 header .navbar {
   border-bottom: 4px solid #c6defa;
 }
-header .navbar ul {
-  background: #6b9acf;
-  text-align: center;
-}
-header .navbar ul li {
-  display: inline-block;
-  padding: 3px 0;
-}
-header .navbar ul li .active-tab:before {
+header .navbar .active-tab:before {
   content: '';
   width: 0;
   height: 0;
+  position: absolute;
   left: 50%;
   bottom: -15px;
   margin-left: -15px;
@@ -79,10 +73,11 @@ header .navbar ul li .active-tab:before {
   border-color: #c6defa transparent transparent transparent;
   border-width: 12px 15px 0 15px;
 }
-header .navbar ul li .active-tab:after {
+header .navbar .active-tab:after {
   content: '';
   width: 0;
   height: 0;
+  position: absolute;
   left: 50%;
   bottom: -10px;
   margin-left: -8px;
@@ -90,7 +85,7 @@ header .navbar ul li .active-tab:after {
   border-color: #6b9acf transparent transparent transparent;
   border-width: 7px 8.5px 0 8.5px;
 }
-header .navbar ul li a {
+header .navbar a {
   display: block;
   position: relative;
   padding: 17px 10px 14px;
@@ -100,9 +95,17 @@ header .navbar ul li a {
   font-size: 18px;
   text-transform: uppercase;
 }
-header .navbar ul li a:hover {
+header .navbar a:hover {
   background-color: #7CA7D9;
   text-decoration: none;
+}
+header .navbar ul {
+  background: #6b9acf;
+  text-align: center;
+}
+header .navbar ul li {
+  display: inline-block;
+  padding: 3px 0;
 }
 /*end styles for header*/
 /*start styles for content*/

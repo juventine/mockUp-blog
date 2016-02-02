@@ -45,10 +45,11 @@
 	content: @content;
 	width: @width;
 	height: @height;
+	position: @position;
 }
 
 .pseudo-active-tab(@left: 50%, @border-style: solid, @bottom: -15px, @margin-left: -15px, @border-color-top: #c6defa){
-	.pseudo(@position: absolute);
+	.pseudo;
 	left: @left;
 	bottom: @bottom;
 	margin-left: @margin-left;
@@ -102,34 +103,34 @@ header{
 	}
 	.navbar{
 	  border-bottom: 4px solid #c6defa;
+	  .active-tab:before{
+				.pseudo-active-tab;
+			  border-width: 12px 15px 0 15px;
+		}
+			.active-tab:after{
+				.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
+			  border-width: 7px 8.5px 0 8.5px;
+		}
+		a{
+		  display: block;
+		  position: relative;
+		  padding: 17px 10px 14px;
+		  text-decoration: none;
+		  color: #fff;
+		  font-family: "Arial-Narrow";
+		  font-size: 18px;
+		  text-transform: uppercase;
+		}
+		a:hover{
+			background-color: #7CA7D9;
+			text-decoration: none;
+		}
 	  ul{
   	 	background: #6b9acf;
 			text-align: center;
 			li{
 			  display: inline-block;
-				padding: 3px 0;
-			.active-tab:before{
-				.pseudo-active-tab;
-			  border-width: 12px 15px 0 15px;
-			}
-			.active-tab:after{
-				.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
-			  border-width: 7px 8.5px 0 8.5px;
-			}
-				a{
-				  display: block;
-				  position: relative;
-				  padding: 17px 10px 14px;
-				  text-decoration: none;
-				  color: #fff;
-				  font-family: "Arial-Narrow";
-				  font-size: 18px;
-				  text-transform: uppercase;
-				}
-				a:hover{
-					background-color: #7CA7D9;
-  				text-decoration: none;
-				}
+				padding: 3px 0
 			}
 	  }
 	}
