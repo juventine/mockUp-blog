@@ -19,6 +19,13 @@
 /*start variables*/
 /*end variables*/
 /*start styles for mixins*/
+.paragraph-text {
+  line-height: 1.5;
+  text-align: justify;
+}
+.border-bottom-post {
+  border-bottom: 1px solid #E2E5E8;
+}
 /*end styles for mixins*/
 html {
   min-height: 100%;
@@ -61,30 +68,6 @@ header .logo a {
 header .navbar {
   border-bottom: 4px solid #c6defa;
 }
-header .navbar .active-tab:before {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  margin-left: -15px;
-  border-style: solid;
-  border-color: #c6defa transparent transparent transparent;
-  border-width: 12px 15px 0 15px;
-}
-header .navbar .active-tab:after {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  margin-left: -8px;
-  border-style: solid;
-  border-color: #6b9acf transparent transparent transparent;
-  border-width: 7px 8.5px 0 8.5px;
-}
 header .navbar a {
   display: block;
   position: relative;
@@ -107,5 +90,158 @@ header .navbar ul li {
   display: inline-block;
   padding: 3px 0;
 }
+header .navbar ul li.active-tab {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -15px;
+  border-style: solid;
+  border-color: #c6defa transparent transparent transparent;
+  border-width: 12px 15px 0 15px;
+}
+header .navbar ul li.active-tab:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -8px;
+  border-style: solid;
+  border-color: #6b9acf transparent transparent transparent;
+  border-width: 7px 8.5px 0 8.5px;
+}
 /*end styles for header*/
 /*start styles for content*/
+.content-wrap {
+  display: flex;
+  width: 930px;
+  margin: 0 auto;
+  padding: 0 0 38px;
+}
+.posts {
+  margin: 0 28px 0 0;
+}
+.post {
+  width: 640px;
+  margin: 0 0 39px;
+  /*start styles for post-info*/
+}
+.post .post-image {
+  width: 100%;
+  height: 230px;
+}
+.post .post-image img {
+  height: 100%;
+}
+.post .post-title {
+  padding: 11px 0;
+  border-bottom: 1px solid #E2E5E8;
+}
+.post .post-title a {
+  font-family: 'Arial-Narrow', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #69747c;
+}
+.post .post-title a:hover {
+  text-decoration: underline;
+}
+.post .post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+  border-bottom: 1px solid #E2E5E8;
+}
+.post .post-info .post-date,
+.post .post-info .post-author {
+  display: inline-block;
+  padding-left: 23px;
+}
+.post .post-info .post-date {
+  margin-right: 16px;
+  background-position: 5px -145px;
+}
+.post .post-info .post-author {
+  background-position: 3px 0px;
+}
+.post .post-info .post-author:hover .author-name {
+  text-decoration: underline;
+}
+.post .post-info .post-social ul {
+  display: flex;
+}
+.post .post-info .post-social ul li {
+  height: 24px;
+  margin-left: 6px;
+  border-radius: 5px;
+  background-color: #d1dae3;
+  /*start social links styles*/
+  /*end social links styles*/
+}
+.post .post-info .post-social ul li:first-child {
+  margin-left: 0px;
+}
+.post .post-info .post-social ul li a {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 24px;
+  padding: 0 6px 0 0;
+  border-radius: 5px;
+  text-align: right;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+.post .post-info .post-social ul li .facebook {
+  width: 49px;
+  background-position: 10px -63px;
+}
+.post .post-info .post-social ul li .facebook:hover {
+  background-color: #3C5A98;
+}
+.post .post-info .post-social ul li .facebook span {
+  margin-left: 19px;
+}
+.post .post-info .post-social ul li .google-plus {
+  width: 41px;
+  background-position: 0 -103px;
+}
+.post .post-info .post-social ul li .google-plus:hover {
+  background-color: #C25234;
+}
+.post .post-info .post-social ul li .twitter {
+  width: 49px;
+  background-position: 3px -172px;
+}
+.post .post-info .post-social ul li .twitter:hover {
+  background-color: #00ACED;
+}
+.post .post-info .post-social ul li .vk {
+  width: 49px;
+  background-position: 7px -207px;
+}
+.post .post-info .post-social ul li .vk:hover {
+  background-color: #48729E;
+}
+.post .post-info .post-social ul li .yandexBlog {
+  width: 41px;
+  background-position: 9px -242px;
+}
+.post .post-info .post-social ul li .yandexBlog:hover {
+  background-color: #D83933;
+}
+.post .description {
+  padding: 12px 0;
+}
+.post .description p {
+  line-height: 1.5;
+  text-align: justify;
+}
+/*end styles for post-info*/
+/*end styles for content*/

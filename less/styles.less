@@ -25,20 +25,44 @@
 /*end including of fonts*/
 
 /*start variables*/
+@color_body_bg : #ffffff;
 @color_social_links : #d1dae3;
 @color_post_title	: #69747c;
 @color_tags : #6794b7;
 @color_tags_hover : #b2d4ec;
+@color_nav_link_hover	: #7CA7D9;
+@color_post_info_border : #E2E5E8;
+@color_post_title : #69747c;
+@color-social-links : #d1dae3;
+@color_facebook_link_hover: #3C5A98;
+@color_google_plus_link_hover: #C25234;
+@color_twitter_link_hover: #00ACED;
+@color_vk_link_hover: #48729E;
+@color_yandexBlog_link_hover: #D83933;
 /*end variables*/
 
 /*start styles for mixins*/
-.text-style(@font-family: 'Arial-Narrow', @font-size: 12px, @font-weight: normal, @color: #fff, @text-decoration: none, @text-transform: none, @text-align: center){
-	font-family: @font-family;
-	font-size: @font-size;
-	font-weight: @font-weight;
-	text-decoration: @text-decoration;
-	text-transform: @text-transform;
-	text-align: @text-align;
+// .paragraph-text(@font-family: 'Arial-Narrow', @font-size: 12px, @font-weight: normal, @color: #fff, @text-decoration: none, @text-transform: none, @text-align: center){
+// 	font-family: @font-family;
+// 	font-size: @font-size;
+// 	font-weight: @font-weight;
+// 	text-decoration: @text-decoration;
+// 	text-transform: @text-transform;
+// 	text-align: @text-align;
+// }
+
+.paragraph-text{
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.border-bottom-post{
+	border-bottom: 1px solid @color_post_info_border;
+}
+
+.social-icons(@width, @background-position-x, @background-position-y) {
+	width: @width;
+	background-position: @background-position-x @background-position-y;
 }
 
 .pseudo(@content: '', @width: 0, @position: absolute, @height: 0){
@@ -70,7 +94,7 @@ body{
   height: 100%;
   font-family: "Arial-Regular",sans-serif;
   font-size: 12px;
-  background: #ffffff;
+  background: @color_body_bg;
 }
 
 a{
@@ -103,15 +127,7 @@ header{
 	}
 	.navbar{
 	  border-bottom: 4px solid #c6defa;
-	  .active-tab:before{
-				.pseudo-active-tab;
-			  border-width: 12px 15px 0 15px;
-		}
-			.active-tab:after{
-				.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
-			  border-width: 7px 8.5px 0 8.5px;
-		}
-		a{
+		a {
 		  display: block;
 		  position: relative;
 		  padding: 17px 10px 14px;
@@ -120,17 +136,27 @@ header{
 		  font-family: "Arial-Narrow";
 		  font-size: 18px;
 		  text-transform: uppercase;
+
+		  &:hover{
+				background-color: @color_nav_link_hover;
+				text-decoration: none;
+			}
 		}
-		a:hover{
-			background-color: #7CA7D9;
-			text-decoration: none;
-		}
-	  ul{
+
+	  ul {
   	 	background: #6b9acf;
 			text-align: center;
-			li{
+			li {
 			  display: inline-block;
 				padding: 3px 0
+			}
+			li.active-tab {
+				.pseudo-active-tab;
+			  border-width: 12px 15px 0 15px;
+				&:before{
+					.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
+				  border-width: 7px 8.5px 0 8.5px;
+				}
 			}
 	  }
 	}
@@ -138,44 +164,127 @@ header{
 /*end styles for header*/
 
 /*start styles for content*/
-// .content-wrap{
-//   display: flex;
-//   width: 930px;
-//   margin: 0 auto;
-//   padding: 0 0 38px;
-// }
+.content-wrap {
+  display: flex;
+  width: 930px;
+  margin: 0 auto;
+  padding: 0 0 38px;
+}
 
-// .posts{
-//   margin: 0 28px 0 0;
-// }
+.posts {
+  margin: 0 28px 0 0;
+}
 
-// .post{
-//   width: 640px;
-//   margin: 0 0 39px;
-// }
-
-// .post-image{
-//   width: 100%;
-//   height: 230px;
-// }
-
-// .post-image img{
-//   height: 100%;
-// }
-
-// .post-title{
-//   padding: 11px 0;
-//   border-bottom: 1px solid #E2E5E8;
-// }
-
-// .post-title a{
-//   font-family: 'Arial-Narrow',sans-serif;
-//   font-size: 20px;
-//   letter-spacing: 1px;
-//   font-weight: 600;
-//   color: #69747c;
-// }
-
-// .post-title a:hover{
-//   text-decoration: underline;
-// }
+.post	{
+	width: 640px;
+	margin: 0 0 39px;
+	.post-image {
+	  width: 100%;
+	  height: 230px;
+	  img {
+	  	height: 100%;
+	  }
+	}
+  .post-title {
+	  padding: 11px 0;
+		.border-bottom-post;
+		a {
+			font-family: 'Arial-Narrow',sans-serif;
+		  font-size: 20px;
+		  letter-spacing: 1px;
+		  font-weight: 600;
+		  color: @color_post_title;
+		  &:hover {
+		  	text-decoration: underline;
+		  }
+		}
+  }
+	/*start styles for post-info*/
+	.post-info {
+	  display:flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  height: 38px;
+	  .border-bottom-post;
+	  .post-date, .post-author {
+	  	display: inline-block;
+  		padding-left: 23px;
+	  }
+	  .post-date {
+		  margin-right: 16px;
+		  background-position: 5px -145px;
+		}
+		.post-author {
+		  background-position: 3px 0px;
+		  &:hover .author-name {
+  			text-decoration: underline;
+		  }
+		}
+		.post-social ul {
+		  display: flex;
+		  li {
+			  height: 24px;
+			  margin-left: 6px;
+			  border-radius: 5px;
+			  background-color: @color-social-links;
+			  &:first-child {
+			  	margin-left: 0px;
+			  }
+			  a {
+			  	display: inline-block;
+				  box-sizing: border-box;
+				  line-height: 24px;
+				  padding: 0 6px 0 0;
+				  border-radius: 5px;
+				  text-align: right;
+				  color: #fff;
+				  font-weight: 800;
+				  text-decoration: none;
+				}
+				/*start social links styles*/
+			  .facebook{
+					.social-icons(49px, 10px, -63px);
+					&:hover {
+						background-color: @color_facebook_link_hover;
+					}
+					span {
+					  margin-left: 19px;
+					}
+				}
+				.google-plus {
+					.social-icons(41px, 0, -103px);
+					&:hover {
+						background-color: @color_google_plus_link_hover;
+					}
+				}
+				.twitter {
+					.social-icons(49px, 3px, -172px);
+					&:hover {
+						background-color: @color_twitter_link_hover;
+					}
+				}
+				.vk {
+					.social-icons(49px, 7px, -207px);
+					&:hover {
+						background-color: @color_vk_link_hover;
+					}
+				}
+				.yandexBlog {
+					.social-icons(@width: 41px, @background-position-x: 9px, @background-position-y: -242px);
+					&:hover {
+						background-color: @color_yandexBlog_link_hover;
+					}
+				}
+				/*end social links styles*/
+			}
+		}
+	}
+	.description {
+		padding: 12px 0;
+		p {
+			.paragraph-text
+		}
+	}
+}
+/*end styles for post-info*/
+/*end styles for content*/
