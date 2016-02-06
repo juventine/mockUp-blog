@@ -2,25 +2,25 @@
 
 /* start including of fonts*/
 @font-face {
-  font-family: "Arial-Narrow";
-  src: url('../fonts/arial-narrow.ttf') format("truetype");
+	font-family: "Arial-Narrow";
+	src: url('../fonts/arial-narrow.ttf') format("truetype");
 }
 
 @font-face {
-  font-family: "Arial-Regular";
-  src: url('../fonts/Arial-Regular.ttf') format("truetype");
+	font-family: "Arial-Regular";
+	src: url('../fonts/Arial-Regular.ttf') format("truetype");
 }
 
 @font-face {
-  font-family: "TrendSansOne";
-  src: url('../fonts/trendsansone-webfont.eot');
-  src: url('../fonts/trendsansone-webfont.eot?#iefix') format("embedded-opentype"),
-       url('../fonts/trendsansone-webfont.woff2') format("woff2"),
-       url('../fonts/trendsansone-webfont.woff') format("woff"),
-       url('../fonts/trendsansone-webfont.ttf') format("truetype"),
-       url('../fonts/trendsansone-webfont.svg#trend_sansone') format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "TrendSansOne";
+	src: url('../fonts/trendsansone-webfont.eot');
+	src: url('../fonts/trendsansone-webfont.eot?#iefix') format("embedded-opentype"),
+			 url('../fonts/trendsansone-webfont.woff2') format("woff2"),
+			 url('../fonts/trendsansone-webfont.woff') format("woff"),
+			 url('../fonts/trendsansone-webfont.ttf') format("truetype"),
+			 url('../fonts/trendsansone-webfont.svg#trend_sansone') format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 /*end including of fonts*/
 
@@ -52,8 +52,8 @@
 // }
 
 .paragraph-text{
-  line-height: 1.5;
-  text-align: justify;
+	line-height: 1.5;
+	text-align: justify;
 }
 
 .border-bottom-post{
@@ -87,18 +87,18 @@
 /*end styles for mixins*/
 
 html{
-  min-height: 100%;
+	min-height: 100%;
 }
 
 body{
-  height: 100%;
-  font-family: "Arial-Regular",sans-serif;
-  font-size: 12px;
-  background: @color_body_bg;
+	height: 100%;
+	font-family: "Arial-Regular",sans-serif;
+	font-size: 12px;
+	background: @color_body_bg;
 }
 
 a{
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /*start styles for helper classes*/
@@ -110,8 +110,8 @@ a{
 }
 
 .sprite{
-  background-image: url('../images/spritesheet.png');
-  background-repeat: no-repeat;
+	background-image: url('../images/spritesheet.png');
+	background-repeat: no-repeat;
 }
 /*end styles for helper classes*/
 
@@ -119,136 +119,136 @@ a{
 header{
 	margin: 0 0 50px;
 	.logo{
-	  padding: 10px 0 15px 0;
-	  text-align: center;
+		padding: 10px 0 15px 0;
+		text-align: center;
 		a{
-		  display: inline-block;
+			display: inline-block;
 		}
 	}
 	.navbar{
-	  border-bottom: 4px solid #c6defa;
+		border-bottom: 4px solid #c6defa;
 		a {
-		  display: block;
-		  position: relative;
-		  padding: 17px 10px 14px;
-		  text-decoration: none;
-		  color: #fff;
-		  font-family: "Arial-Narrow";
-		  font-size: 18px;
-		  text-transform: uppercase;
+			display: block;
+			position: relative;
+			padding: 17px 10px 14px;
+			text-decoration: none;
+			color: #fff;
+			font-family: "Arial-Narrow";
+			font-size: 18px;
+			text-transform: uppercase;
 
-		  &:hover{
+			&:hover{
 				background-color: @color_nav_link_hover;
 				text-decoration: none;
 			}
 		}
 
-	  ul {
-  	 	background: #6b9acf;
+		ul {
+			background: #6b9acf;
 			text-align: center;
 			li {
-			  display: inline-block;
+				display: inline-block;
 				padding: 3px 0
 			}
 			li.active-tab {
 				.pseudo-active-tab;
-			  border-width: 12px 15px 0 15px;
+				border-width: 12px 15px 0 15px;
 				&:before{
 					.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
-				  border-width: 7px 8.5px 0 8.5px;
+					border-width: 7px 8.5px 0 8.5px;
 				}
 			}
-	  }
+		}
 	}
 }
 /*end styles for header*/
 
 /*start styles for content*/
 .content-wrap {
-  display: flex;
-  width: 930px;
-  margin: 0 auto;
-  padding: 0 0 38px;
+	display: flex;
+	width: 930px;
+	margin: 0 auto;
+	padding: 0 0 38px;
 }
 
 .posts {
-  margin: 0 28px 0 0;
+	margin: 0 28px 0 0;
 }
 
 .post	{
 	width: 640px;
 	margin: 0 0 39px;
 	.post-image {
-	  width: 100%;
-	  height: 230px;
-	  img {
-	  	height: 100%;
-	  }
+		width: 100%;
+		height: 230px;
+		img {
+			height: 100%;
+		}
 	}
-  .post-title {
-	  padding: 11px 0;
+	.post-title {
+		padding: 11px 0;
 		.border-bottom-post;
 		a {
 			font-family: 'Arial-Narrow',sans-serif;
-		  font-size: 20px;
-		  letter-spacing: 1px;
-		  font-weight: 600;
-		  color: @color_post_title;
-		  &:hover {
-		  	text-decoration: underline;
-		  }
+			font-size: 20px;
+			letter-spacing: 1px;
+			font-weight: 600;
+			color: @color_post_title;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
-  }
+	}
 	/*start styles for post-info*/
 	.post-info {
-	  display:flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  height: 38px;
-	  .border-bottom-post;
-	  .post-date, .post-author {
-	  	display: inline-block;
-  		padding-left: 23px;
-	  }
-	  .post-date {
-		  margin-right: 16px;
-		  background-position: 5px -145px;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 38px;
+		.border-bottom-post;
+		.post-date, .post-author {
+			display: inline-block;
+			padding-left: 23px;
+		}
+		.post-date {
+			margin-right: 16px;
+			background-position: 5px -145px;
 		}
 		.post-author {
-		  background-position: 3px 0px;
-		  &:hover .author-name {
-  			text-decoration: underline;
-		  }
+			background-position: 3px 0px;
+			&:hover .author-name {
+				text-decoration: underline;
+			}
 		}
 		.post-social ul {
-		  display: flex;
-		  li {
-			  height: 24px;
-			  margin-left: 6px;
-			  border-radius: 5px;
-			  background-color: @color-social-links;
-			  &:first-child {
-			  	margin-left: 0px;
-			  }
-			  a {
-			  	display: inline-block;
-				  box-sizing: border-box;
-				  line-height: 24px;
-				  padding: 0 6px 0 0;
-				  border-radius: 5px;
-				  text-align: right;
-				  color: #fff;
-				  font-weight: 800;
-				  text-decoration: none;
+			display: flex;
+			li {
+				height: 24px;
+				margin-left: 6px;
+				border-radius: 5px;
+				background-color: @color-social-links;
+				&:first-child {
+					margin-left: 0px;
+				}
+				a {
+					display: inline-block;
+					box-sizing: border-box;
+					line-height: 24px;
+					padding: 0 6px 0 0;
+					border-radius: 5px;
+					text-align: right;
+					color: #fff;
+					font-weight: 800;
+					text-decoration: none;
 				}
 				/*start social links styles*/
-			  .facebook{
+				.facebook{
 					.social-icons(49px, 10px, -63px);
 					&:hover {
 						background-color: @color_facebook_link_hover;
 					}
 					span {
-					  margin-left: 19px;
+						margin-left: 19px;
 					}
 				}
 				.google-plus {
