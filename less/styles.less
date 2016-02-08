@@ -86,46 +86,46 @@
 // }
 /*end styles for mixins*/
 
-html{
+html {
 	min-height: 100%;
 }
 
-body{
+body {
 	height: 100%;
 	font-family: "Arial-Regular",sans-serif;
 	font-size: 12px;
 	background: @color_body_bg;
 }
 
-a{
+a {
 	cursor: pointer;
 }
 
 /*start styles for helper classes*/
-.clearfix:after{
+.clearfix:after {
 	.pseudo(@position: static);
 	display: block;
 	clear: both;
 	visibility: hidden;
 }
 
-.sprite{
+.sprite {
 	background-image: url('../images/spritesheet.png');
 	background-repeat: no-repeat;
 }
 /*end styles for helper classes*/
 
 /*start styles for header*/
-header{
+header {
 	margin: 0 0 50px;
-	.logo{
+	.logo {
 		padding: 10px 0 15px 0;
 		text-align: center;
 		a{
 			display: inline-block;
 		}
 	}
-	.navbar{
+	.navbar {
 		border-bottom: 4px solid #c6defa;
 		a {
 			display: block;
@@ -137,7 +137,7 @@ header{
 			font-size: 18px;
 			text-transform: uppercase;
 
-			&:hover{
+			&:hover {
 				background-color: @color_nav_link_hover;
 				text-decoration: none;
 			}
@@ -242,7 +242,7 @@ header{
 					text-decoration: none;
 				}
 				/*start social links styles*/
-				.facebook{
+				.facebook {
 					.social-icons(49px, 10px, -63px);
 					&:hover {
 						background-color: @color_facebook_link_hover;
@@ -287,4 +287,55 @@ header{
 	}
 }
 /*end styles for post-info*/
+/*start styles for aside*/
+aside {
+	width: 254px;
+	section {
+	margin: 0 0 32px;
+	.title {
+	position: relative;
+	margin: 0 0 15px;
+	padding: 0 0 0 41px;
+	border-bottom: 5px solid #6794b7;
+	&:before {
+		display: inline-block;
+		position: absolute;
+		top: 1px;
+		left: 0;
+		width: 30px;
+		height: 23px;
+		line-height: 23px;
+		background: #6794b7;
+		color: #fff;
+		font-weight: bold;
+		font-family: "Arial-Narrow";
+		font-size: 18px;
+		text-align: center;
+	}
+	h2 {
+		padding: 5px 0 1px;
+		font-family: 'TrendSansOne';
+		font-size: 17px;
+		font-weight: bold;
+		color: #6290b4;
+		text-transform: uppercase;
+	}
+	}
+	}
+	section.about .title {
+		&:before {
+			content: '?';
+		}
+	}
+	section.some .title{
+		&:before {
+			content: '!';
+		}
+	}
+	p {
+	.paragraph-text
+	}
+}
+
+/*end styles for tags*/
 /*end styles for content*/
