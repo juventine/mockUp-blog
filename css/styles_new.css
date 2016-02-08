@@ -73,7 +73,7 @@ header .navbar a {
   position: relative;
   padding: 17px 10px 14px;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-family: "Arial-Narrow";
   font-size: 18px;
   text-transform: uppercase;
@@ -128,7 +128,6 @@ header .navbar ul li.active-tab:before {
 .post {
   width: 640px;
   margin: 0 0 39px;
-  /*start styles for post-info*/
 }
 .post .post-image {
   width: 100%;
@@ -151,32 +150,40 @@ header .navbar ul li.active-tab:before {
 .post .post-title a:hover {
   text-decoration: underline;
 }
-.post .post-info {
+.post .description {
+  padding: 12px 0;
+}
+.post .description p {
+  line-height: 1.5;
+  text-align: justify;
+}
+/*start styles for post-info*/
+.post-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 38px;
   border-bottom: 1px solid #E2E5E8;
 }
-.post .post-info .post-date,
-.post .post-info .post-author {
+.post-info .post-date,
+.post-info .post-author {
   display: inline-block;
   padding-left: 23px;
 }
-.post .post-info .post-date {
+.post-info .post-date {
   margin-right: 16px;
   background-position: 5px -145px;
 }
-.post .post-info .post-author {
+.post-info .post-author {
   background-position: 3px 0px;
 }
-.post .post-info .post-author:hover .author-name {
+.post-info .post-author:hover .author-name {
   text-decoration: underline;
 }
-.post .post-info .post-social ul {
+.post-social ul {
   display: flex;
 }
-.post .post-info .post-social ul li {
+.post-social ul li {
   height: 24px;
   margin-left: 6px;
   border-radius: 5px;
@@ -184,64 +191,57 @@ header .navbar ul li.active-tab:before {
   /*start social links styles*/
   /*end social links styles*/
 }
-.post .post-info .post-social ul li:first-child {
+.post-social ul li:first-child {
   margin-left: 0px;
 }
-.post .post-info .post-social ul li a {
+.post-social ul li a {
   display: inline-block;
   box-sizing: border-box;
   line-height: 24px;
   padding: 0 6px 0 0;
   border-radius: 5px;
   text-align: right;
-  color: #fff;
+  color: #ffffff;
   font-weight: 800;
   text-decoration: none;
 }
-.post .post-info .post-social ul li .facebook {
+.post-social ul li .facebook {
   width: 49px;
   background-position: 10px -63px;
 }
-.post .post-info .post-social ul li .facebook:hover {
+.post-social ul li .facebook:hover {
   background-color: #3C5A98;
 }
-.post .post-info .post-social ul li .facebook span {
+.post-social ul li .facebook span {
   margin-left: 19px;
 }
-.post .post-info .post-social ul li .google-plus {
+.post-social ul li .google-plus {
   width: 41px;
   background-position: 0 -103px;
 }
-.post .post-info .post-social ul li .google-plus:hover {
+.post-social ul li .google-plus:hover {
   background-color: #C25234;
 }
-.post .post-info .post-social ul li .twitter {
+.post-social ul li .twitter {
   width: 49px;
   background-position: 3px -172px;
 }
-.post .post-info .post-social ul li .twitter:hover {
+.post-social ul li .twitter:hover {
   background-color: #00ACED;
 }
-.post .post-info .post-social ul li .vk {
+.post-social ul li .vk {
   width: 49px;
   background-position: 7px -207px;
 }
-.post .post-info .post-social ul li .vk:hover {
+.post-social ul li .vk:hover {
   background-color: #48729E;
 }
-.post .post-info .post-social ul li .yandexBlog {
+.post-social ul li .yandexBlog {
   width: 41px;
   background-position: 9px -242px;
 }
-.post .post-info .post-social ul li .yandexBlog:hover {
+.post-social ul li .yandexBlog:hover {
   background-color: #D83933;
-}
-.post .description {
-  padding: 12px 0;
-}
-.post .description p {
-  line-height: 1.5;
-  text-align: justify;
 }
 /*end styles for post-info*/
 /*start styles for aside*/
@@ -266,7 +266,7 @@ aside section .title:before {
   height: 23px;
   line-height: 23px;
   background: #6794b7;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-family: "Arial-Narrow";
   font-size: 18px;
@@ -298,8 +298,7 @@ aside p {
   margin: 0 10px 5px 0;
   padding: 4px 20px 3px 13px;
   background-color: #6794b7;
-  color: #fff;
-  font-size: 12px;
+  color: #ffffff;
   text-decoration: none;
 }
 .tags a:hover {
@@ -309,22 +308,22 @@ aside p {
   border-color: transparent transparent transparent #b2d4ec;
 }
 .tags a:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  right: 0px;
+  content: '';
   width: 7px;
   height: 7px;
+  position: absolute;
+  top: 5px;
+  right: 0;
   border-radius: 7px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .tags a:after {
-  position: absolute;
-  content: "";
-  top: 0px;
-  right: -9px;
+  content: '';
   width: 0;
   height: 0;
+  position: absolute;
+  top: 0px;
+  right: -9px;
   border-style: solid;
   border-width: 9px 0 10px 9px;
   border-color: transparent transparent transparent #6794b7;
