@@ -39,6 +39,8 @@
 @color_twitter_link_hover: #00ACED;
 @color_vk_link_hover: #48729E;
 @color_yandexBlog_link_hover: #D83933;
+@color_aside_border: #6794b7;
+@color_aside_title: #6290b4;
 /*end variables*/
 
 /*start styles for mixins*/
@@ -296,7 +298,7 @@ aside {
 	position: relative;
 	margin: 0 0 15px;
 	padding: 0 0 0 41px;
-	border-bottom: 5px solid #6794b7;
+	border-bottom: 5px solid @color_aside_border;
 	&:before {
 		display: inline-block;
 		position: absolute;
@@ -305,7 +307,7 @@ aside {
 		width: 30px;
 		height: 23px;
 		line-height: 23px;
-		background: #6794b7;
+		background: @color_aside_border;
 		color: #fff;
 		font-weight: bold;
 		font-family: "Arial-Narrow";
@@ -317,7 +319,7 @@ aside {
 		font-family: 'TrendSansOne';
 		font-size: 17px;
 		font-weight: bold;
-		color: #6290b4;
+		color: @color_aside_title;
 		text-transform: uppercase;
 	}
 	}
