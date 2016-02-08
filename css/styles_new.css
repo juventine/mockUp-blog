@@ -290,5 +290,47 @@ aside p {
   line-height: 1.5;
   text-align: justify;
 }
+/*end styles for aside*/
+/*start styles for tags*/
+.tags a {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 5px 0;
+  padding: 4px 20px 3px 13px;
+  background-color: #6794b7;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+.tags a:hover {
+  background-color: #b2d4ec;
+}
+.tags a:hover:after {
+  border-color: transparent transparent transparent #b2d4ec;
+}
+.tags a:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.tags a:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -9px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 0 10px 9px;
+  border-color: transparent transparent transparent #6794b7;
+}
+.tags a:nth-child(3n) {
+  margin-right: 0;
+}
 /*end styles for tags*/
 /*end styles for content*/
