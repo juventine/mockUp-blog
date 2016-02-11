@@ -68,29 +68,29 @@ header .logo a {
 header .navbar {
   border-bottom: 4px solid #c6defa;
 }
-header .navbar a {
-  display: block;
-  position: relative;
-  padding: 17px 10px 14px;
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Arial-Narrow";
-  font-size: 18px;
-  text-transform: uppercase;
-}
-header .navbar a:hover {
-  background-color: #7CA7D9;
-  text-decoration: none;
-}
 header .navbar ul {
   background: #6b9acf;
   text-align: center;
 }
 header .navbar ul li {
   display: inline-block;
-  padding: 3px 0;
 }
-header .navbar ul li.active-tab {
+header .navbar ul a {
+  display: block;
+  position: relative;
+  padding: 17px 20px 14px;
+  margin: 3px 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Arial-Narrow";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+header .navbar ul a:hover {
+  background-color: #7CA7D9;
+  text-decoration: none;
+}
+header .navbar ul a.active-tab:before {
   content: '';
   width: 0;
   height: 0;
@@ -102,7 +102,7 @@ header .navbar ul li.active-tab {
   border-color: #c6defa transparent transparent transparent;
   border-width: 12px 15px 0 15px;
 }
-header .navbar ul li.active-tab:before {
+header .navbar ul a.active-tab:after {
   content: '';
   width: 0;
   height: 0;
@@ -333,3 +333,13 @@ aside p {
 }
 /*end styles for tags*/
 /*end styles for content*/
+/*start styles for media*/
+/*start media for mobile devices*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .content-wrap {
+    width: 100%;
+  }
+}
+/*end media for mobile devices*/
+/*start media for tablets*/
+/*end styles for tablets*/

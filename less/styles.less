@@ -121,36 +121,34 @@ header {
 	}
 	.navbar {
 		border-bottom: 4px solid #c6defa;
-		a {
-			display: block;
-			position: relative;
-			padding: 17px 10px 14px;
-			text-decoration: none;
-			color: @color_base;
-			font-family: "Arial-Narrow";
-			font-size: 18px;
-			text-transform: uppercase;
-
-			&:hover {
-				background-color: @color_nav_link_hover;
-				text-decoration: none;
-			}
-		}
-
 		ul {
 			background: #6b9acf;
 			text-align: center;
 			li {
 				display: inline-block;
-				padding: 3px 0
 			}
-			li.active-tab {
+			a {
+				display: block;
+				position: relative;
+				padding: 17px 20px 14px;
+				margin: 3px 0;
+				text-decoration: none;
+				color: @color_base;
+				font-family: "Arial-Narrow";
+				font-size: 18px;
+				text-transform: uppercase;
+			&:hover {
+				background-color: @color_nav_link_hover;
+				text-decoration: none;
+			}
+			&.active-tab:before {
 				.pseudo-active-tab;
 				border-width: 12px 15px 0 15px;
-				&:before{
+			}
+			&.active-tab:after{
 					.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
 					border-width: 7px 8.5px 0 8.5px;
-				}
+			}
 			}
 		}
 	}
@@ -369,3 +367,27 @@ aside {
 }
 /*end styles for tags*/
 /*end styles for content*/
+
+/*start styles for media*/
+
+/*start media for mobile devices*/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 768px) {
+  	.content-wrap {
+  		width: 100%;
+  	}
+  }
+/*end media for mobile devices*/
+
+/*start media for tablets*/
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+  }
+
+@media screen
+	and (min-device-width: 1200px)
+ {
+}
+/*end styles for tablets*/
