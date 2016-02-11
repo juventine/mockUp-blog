@@ -67,16 +67,16 @@ header .logo a {
 }
 header .navbar {
   border-bottom: 4px solid #c6defa;
+  background: #6b9acf;
 }
 header .navbar ul {
-  background: #6b9acf;
   text-align: center;
 }
 header .navbar ul li {
   display: inline-block;
 }
-header .navbar ul a {
-  display: block;
+header .navbar a {
+  display: inline-block;
   position: relative;
   padding: 17px 20px 14px;
   margin: 3px 0;
@@ -86,11 +86,11 @@ header .navbar ul a {
   font-size: 18px;
   text-transform: uppercase;
 }
-header .navbar ul a:hover {
+header .navbar a:hover {
   background-color: #7CA7D9;
   text-decoration: none;
 }
-header .navbar ul a.active-tab:before {
+header .navbar a.active-tab:before {
   content: '';
   width: 0;
   height: 0;
@@ -102,7 +102,7 @@ header .navbar ul a.active-tab:before {
   border-color: #c6defa transparent transparent transparent;
   border-width: 12px 15px 0 15px;
 }
-header .navbar ul a.active-tab:after {
+header .navbar a.active-tab:after {
   content: '';
   width: 0;
   height: 0;
@@ -113,6 +113,16 @@ header .navbar ul a.active-tab:after {
   border-style: solid;
   border-color: #6b9acf transparent transparent transparent;
   border-width: 7px 8.5px 0 8.5px;
+}
+header .navbar .tabs-nav-link:before {
+  display: none;
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: static;
+  display: inline-block;
+  margin-top: 6px;
+  background-image: url('../images/tag.png');
 }
 /*end styles for header*/
 /*start styles for content*/
@@ -336,8 +346,20 @@ aside p {
 /*start styles for media*/
 /*start media for mobile devices*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
-  .content-wrap {
-    width: 100%;
+  header .navbar .nav {
+    display: none;
+  }
+  header .navbar a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #7ca7d9;
+  }
+  header .navbar .tabs-nav-link:before {
+    display: inline-block;
   }
 }
 /*end media for mobile devices*/

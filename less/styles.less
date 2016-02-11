@@ -40,6 +40,7 @@
 @color_yandexBlog_link_hover: #D83933;
 @color_aside_border_tags: #6794b7;
 @color_aside_title: #6290b4;
+@color_navbar_background: #6b9acf;
 /*end variables*/
 
 /*start styles for mixins*/
@@ -121,35 +122,42 @@ header {
 	}
 	.navbar {
 		border-bottom: 4px solid #c6defa;
+		background: @color_navbar_background;
 		ul {
-			background: #6b9acf;
 			text-align: center;
 			li {
 				display: inline-block;
 			}
-			a {
-				display: block;
-				position: relative;
-				padding: 17px 20px 14px;
-				margin: 3px 0;
-				text-decoration: none;
-				color: @color_base;
-				font-family: "Arial-Narrow";
-				font-size: 18px;
-				text-transform: uppercase;
-			&:hover {
-				background-color: @color_nav_link_hover;
-				text-decoration: none;
-			}
-			&.active-tab:before {
-				.pseudo-active-tab;
-				border-width: 12px 15px 0 15px;
-			}
-			&.active-tab:after{
-					.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
-					border-width: 7px 8.5px 0 8.5px;
-			}
-			}
+		}
+		a {
+		display: inline-block;
+		position: relative;
+		padding: 17px 20px 14px;
+		margin: 3px 0;
+		text-decoration: none;
+		color: @color_base;
+		font-family: "Arial-Narrow";
+		font-size: 18px;
+		text-transform: uppercase;
+		&:hover {
+		background-color: @color_nav_link_hover;
+		text-decoration: none;
+		}
+		&.active-tab:before {
+		.pseudo-active-tab;
+		border-width: 12px 15px 0 15px;
+		}
+		&.active-tab:after {
+			.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
+			border-width: 7px 8.5px 0 8.5px;
+		}
+		}
+		.tabs-nav-link:before {
+			display: none;
+			.pseudo(@width: 18px, @height: 18px, @position: static);
+			display: inline-block;
+			margin-top: 6px;
+			background-image: url('../images/tag.png');
 		}
 	}
 }
@@ -194,7 +202,7 @@ header {
 	.description {
 		padding: 12px 0;
 		p {
-			.paragraph-text
+			.paragraph-text;
 		}
 	}
 }
@@ -372,19 +380,35 @@ aside {
 
 /*start media for mobile devices*/
 @media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 768px) {
-  	.content-wrap {
-  		width: 100%;
-  	}
-  }
+	and (min-device-width: 320px)
+	and (max-device-width: 768px) {
+		header {
+			.navbar {
+				.nav {
+					display: none;
+				}
+				a {
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					padding: 0;
+					text-align: center;
+					vertical-align: middle;
+					background-color: #7ca7d9;
+				}
+				.tabs-nav-link:before{
+					display: inline-block;
+				}
+			}
+		}
+	}
 /*end media for mobile devices*/
 
 /*start media for tablets*/
 @media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px) {
-  }
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px) {
+	}
 
 @media screen
 	and (min-device-width: 1200px)
