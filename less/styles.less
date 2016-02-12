@@ -117,8 +117,13 @@ header {
 	.logo {
 		padding: 10px 0 15px 0;
 		text-align: center;
-		a{
-			display: inline-block;
+		a {
+			display: block;
+		  margin: 0 auto;
+		  width: 80%;
+		}
+		img {
+			width: 100%;
 		}
 	}
 	.navbar {
@@ -392,6 +397,13 @@ aside {
 	and (min-device-width: 320px)
 	and (max-device-width: 768px) {
 		header {
+			width: 100%;
+			.logo {
+				padding: 10px 0 15px 0;
+				img {
+					width: 75%;
+				}
+			}
 			.navbar {
 				.nav {
 					display: none;
@@ -405,7 +417,7 @@ aside {
 					text-align: center;
 					vertical-align: middle;
 					background-color: #7ca7d9;
-				&.tabs-nav-link:before{
+				&.tabs-nav-link:before {
 					display: inline-block;
 				}
 				&.navigation-link {

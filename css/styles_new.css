@@ -64,7 +64,12 @@ header .logo {
   text-align: center;
 }
 header .logo a {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+header .logo img {
+  width: 100%;
 }
 header .navbar {
   border-bottom: 4px solid #c6defa;
@@ -358,6 +363,15 @@ aside p {
 /*start styles for media*/
 /*start media for mobile devices*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  header {
+    width: 100%;
+  }
+  header .logo {
+    padding: 10px 0 15px 0;
+  }
+  header .logo img {
+    width: 75%;
+  }
   header .navbar .nav {
     display: none;
   }
