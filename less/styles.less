@@ -115,15 +115,14 @@ header {
 	width: 100%;
 	margin: 0 0 50px;
 	.logo {
-		padding: 10px 0 15px 0;
+		padding: 5px 0 5px 0;
 		text-align: center;
 		a {
 			display: block;
 		  margin: 0 auto;
-		  width: 80%;
 		}
 		img {
-			width: 100%;
+			width: 80%;
 		}
 	}
 	.navbar {
@@ -397,13 +396,6 @@ aside {
 	and (min-device-width: 320px)
 	and (max-device-width: 768px) {
 		header {
-			width: 100%;
-			.logo {
-				padding: 10px 0 15px 0;
-				img {
-					width: 75%;
-				}
-			}
 			.navbar {
 				.nav {
 					display: none;
@@ -434,11 +426,25 @@ aside {
 @media only screen
 	and (min-device-width: 768px)
 	and (max-device-width: 1024px) {
+		header {
+			.logo {
+				padding: 10px 0 10px 0;
+				img {
+					width: 60%;
+				}
+			}
+		}
 	}
 
 @media screen
-	and (min-device-width: 1200px)
- {
-
+	and (min-device-width: 1200px) {
+	header {
+		.logo {
+			padding: 10px 0 15px 0;
+			img {
+				width: initial;
+			}
+		}
+	}
 }
 /*end styles for tablets*/
