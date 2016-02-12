@@ -56,6 +56,7 @@ a {
 /*end styles for helper classes*/
 /*start styles for header*/
 header {
+  width: 100%;
   margin: 0 0 50px;
 }
 header .logo {
