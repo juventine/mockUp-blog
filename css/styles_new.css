@@ -68,6 +68,7 @@ header .logo a {
 header .navbar {
   border-bottom: 4px solid #c6defa;
   background: #6b9acf;
+  font-size: 0;
 }
 header .navbar ul {
   text-align: center;
@@ -115,14 +116,24 @@ header .navbar a.active-tab:after {
   border-width: 7px 8.5px 0 8.5px;
 }
 header .navbar .tabs-nav-link:before {
-  display: none;
   content: '';
   width: 18px;
   height: 18px;
   position: static;
-  display: inline-block;
   margin-top: 6px;
   background-image: url('../images/tag.png');
+}
+header .navbar .navigation-link {
+  margin-right: 3px;
+  background-color: none;
+}
+header .navbar .navigation-link:before {
+  display: inline-block;
+  content: '';
+  width: 18px;
+  height: 10px;
+  position: static;
+  background-image: url('../images/thumbnail.png');
 }
 /*end styles for header*/
 /*start styles for content*/
@@ -354,12 +365,17 @@ aside p {
     height: 30px;
     line-height: 30px;
     padding: 0;
+    margin-left: 3px;
     text-align: center;
     vertical-align: middle;
     background-color: #7ca7d9;
   }
-  header .navbar .tabs-nav-link:before {
+  header .navbar a.tabs-nav-link:before {
     display: inline-block;
+  }
+  header .navbar a.navigation-link {
+    float: right;
+    background-color: initial;
   }
 }
 /*end media for mobile devices*/

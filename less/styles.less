@@ -27,9 +27,9 @@
 /*start variables*/
 @color_base : #ffffff;
 @color_social_links : #d1dae3;
-@color_post_title	: #69747c;
+@color_post_title : #69747c;
 @color_tags_hover : #b2d4ec;
-@color_nav_link_hover	: #7CA7D9;
+@color_nav_link_hover : #7CA7D9;
 @color_post_info_border : #E2E5E8;
 @color_post_title : #69747c;
 @color-social-links : #d1dae3;
@@ -75,7 +75,7 @@
 }
 
 .positioning-top-right(@top: 0, @right: 0) {
-	top:	@top;
+	top:  @top;
 	right: @right;
 }
 
@@ -123,6 +123,7 @@ header {
 	.navbar {
 		border-bottom: 4px solid #c6defa;
 		background: @color_navbar_background;
+		font-size: 0;
 		ul {
 			text-align: center;
 			li {
@@ -153,11 +154,18 @@ header {
 		}
 		}
 		.tabs-nav-link:before {
-			display: none;
 			.pseudo(@width: 18px, @height: 18px, @position: static);
-			display: inline-block;
 			margin-top: 6px;
 			background-image: url('../images/tag.png');
+		}
+		.navigation-link {
+			margin-right: 3px;
+			background-color: none;
+		&:before {
+			display: inline-block;
+			.pseudo(@width: 18px, @height: 10px, @position: static);
+			background-image: url('../images/thumbnail.png');
+		}
 		}
 	}
 }
@@ -175,7 +183,7 @@ header {
 	margin: 0 28px 0 0;
 }
 
-.post	{
+.post {
 	width: 640px;
 	margin: 0 0 39px;
 	.post-image {
@@ -392,12 +400,17 @@ aside {
 					height: 30px;
 					line-height: 30px;
 					padding: 0;
+					margin-left: 3px;
 					text-align: center;
 					vertical-align: middle;
 					background-color: #7ca7d9;
-				}
-				.tabs-nav-link:before{
+				&.tabs-nav-link:before{
 					display: inline-block;
+				}
+				&.navigation-link {
+					float: right;
+					background-color: initial;
+				}
 				}
 			}
 		}
@@ -413,5 +426,6 @@ aside {
 @media screen
 	and (min-device-width: 1200px)
  {
+
 }
 /*end styles for tablets*/
