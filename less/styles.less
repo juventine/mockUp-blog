@@ -119,7 +119,7 @@ header {
 		text-align: center;
 		a {
 			display: block;
-		  margin: 0 auto;
+			margin: 0 auto;
 		}
 		img {
 			width: 80%;
@@ -136,15 +136,20 @@ header {
 			}
 		}
 		a {
-		display: inline-block;
-		position: relative;
-		padding: 17px 20px 14px;
-		margin: 3px 0;
-		text-decoration: none;
-		color: @color_base;
-		font-family: "Arial-Narrow";
-		font-size: 18px;
-		text-transform: uppercase;
+			display: inline-block;
+			position: relative;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			padding: 0;
+			margin-left: 3px;
+			color: @color_base;
+			font-family: "Arial-Narrow";
+			font-size: 18px;
+			text-align: center;
+			vertical-align: middle;
+			background-color: #7ca7d9;
+			text-transform: uppercase;
 		&:hover {
 		background-color: @color_nav_link_hover;
 		text-decoration: none;
@@ -394,21 +399,13 @@ aside {
 /*start media for mobile devices*/
 @media only screen
 	and (min-device-width: 320px)
-	and (max-device-width: 768px) {
+	and (max-device-width: 767px) {
 		header {
 			.navbar {
 				.nav {
 					display: none;
 				}
 				a {
-					width: 30px;
-					height: 30px;
-					line-height: 30px;
-					padding: 0;
-					margin-left: 3px;
-					text-align: center;
-					vertical-align: middle;
-					background-color: #7ca7d9;
 				&.tabs-nav-link:before {
 					display: inline-block;
 				}
@@ -425,7 +422,7 @@ aside {
 /*start media for tablets*/
 @media only screen
 	and (min-device-width: 768px)
-	and (max-device-width: 1024px) {
+	and (max-device-width: 1023px) {
 		header {
 			.logo {
 				padding: 10px 0 10px 0;
@@ -433,11 +430,40 @@ aside {
 					width: 60%;
 				}
 			}
+			.navbar {
+				display: flex;
+				justify-content: space-between;
+				a {
+					height: auto;
+					width: 43px;
+					line-height: initial;
+					margin: 3px 0;
+					padding: 13px 0;
+					text-decoration: none;
+					font-size: 18px;
+				}
+				a.some-nav-link {
+					order: 1;
+				}
+				a.tabs-nav-link, a.navigation-link {
+					display: none;
+				}
+				.nav {
+				  display: flex;
+				  width: 75%;
+				  justify-content: space-between;
+					a {
+						padding: 13px 20px 13px;
+						background-color: initial;
+						width: auto;
+					}
+				}
+			}
 		}
 	}
 
 @media screen
-	and (min-device-width: 1200px) {
+	and (min-device-width: 1024px) {
 	header {
 		.logo {
 			padding: 10px 0 15px 0;
