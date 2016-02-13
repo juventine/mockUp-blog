@@ -96,6 +96,7 @@ header .navbar a {
   vertical-align: middle;
   background-color: #7ca7d9;
   text-transform: uppercase;
+  text-decoration: none;
 }
 header .navbar a:hover {
   background-color: #7CA7D9;
@@ -107,7 +108,7 @@ header .navbar a.active-tab:before {
   height: 0;
   position: absolute;
   left: 50%;
-  bottom: -15px;
+  bottom: -12px;
   margin-left: -15px;
   border-style: solid;
   border-color: #c6defa transparent transparent transparent;
@@ -119,7 +120,7 @@ header .navbar a.active-tab:after {
   height: 0;
   position: absolute;
   left: 50%;
-  bottom: -10px;
+  bottom: -7px;
   margin-left: -8px;
   border-style: solid;
   border-color: #6b9acf transparent transparent transparent;
@@ -407,6 +408,11 @@ aside p {
   header .navbar a.navigation-link {
     display: none;
   }
+  header .navbar .nav {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+  }
   header .navbar .nav a {
     padding: 13px 20px 13px;
     background-color: initial;
@@ -419,6 +425,17 @@ aside p {
   }
   header .logo img {
     width: initial;
+  }
+  header .navbar {
+    display: block;
+  }
+  header .navbar > a {
+    display: none;
+  }
+  header .navbar .nav a {
+    padding: 13px 20px 13px;
+    background-color: initial;
+    width: auto;
   }
 }
 /*end styles for tablets*/
