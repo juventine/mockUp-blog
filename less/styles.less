@@ -53,6 +53,10 @@
 	border-bottom: 1px solid @color_post_info_border;
 }
 
+.hover-nav-link-bg {
+	background-color: @color_nav_link_hover;
+}
+
 .social-icons(@width, @background-position-x, @background-position-y) {
 	width: @width;
 	background-position: @background-position-x @background-position-y;
@@ -65,7 +69,7 @@
 	position: @position;
 }
 
-.pseudo-active-tab(@left: 50%, @border-style: solid, @bottom: -12px, @margin-left: -15px, @border-color-top: #c6defa) {
+.pseudo-active-tab(@left: 50%, @border-style: solid, @bottom: -15px, @margin-left: -15px, @border-color-top: #c6defa) {
 	.pseudo;
 	left: @left;
 	bottom: @bottom;
@@ -152,15 +156,15 @@ header {
 			text-transform: uppercase;
 			text-decoration: none;
 		&:hover {
-		background-color: @color_nav_link_hover;
-		text-decoration: none;
+			.hover-nav-link-bg;
+			text-decoration: none;
 		}
 		&.active-tab:before {
-		.pseudo-active-tab;
-		border-width: 12px 15px 0 15px;
+			.pseudo-active-tab;
+			border-width: 12px 15px 0 15px;
 		}
 		&.active-tab:after {
-			.pseudo-active-tab(@bottom: -7px, @margin-left: -8px, @border-color-top: #6b9acf);
+			.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
 			border-width: 7px 8.5px 0 8.5px;
 		}
 		}
@@ -450,9 +454,9 @@ aside {
 					display: none;
 				}
 				.nav {
-				  display: flex;
-				  width: 75%;
-				  justify-content: space-between;
+					display: flex;
+					width: 75%;
+					justify-content: space-between;
 					a {
 						padding: 13px 20px 13px;
 						background-color: initial;
@@ -463,8 +467,7 @@ aside {
 		}
 	}
 
-@media screen
-	and (min-device-width: 1024px) {
+@media screen and (min-device-width: 1024px) {
 	header {
 		.logo {
 			padding: 10px 0 15px 0;
@@ -482,6 +485,15 @@ aside {
 					padding: 13px 20px 13px;
 					background-color: initial;
 					width: auto;
+					&:hover {
+						.hover-nav-link-bg;
+					}
+					&.active-tab:before {
+						.pseudo-active-tab(@bottom: -12px);
+					}
+					&.active-tab:after {
+						.pseudo-active-tab(@bottom: -7px, @margin-left: -8px, @border-color-top: #6b9acf);
+					}
 				}
 			}
 		}

@@ -26,6 +26,9 @@
 .border-bottom-post {
   border-bottom: 1px solid #E2E5E8;
 }
+.hover-nav-link-bg {
+  background-color: #7CA7D9;
+}
 /*end styles for mixins*/
 html {
   min-height: 100%;
@@ -108,7 +111,7 @@ header .navbar a.active-tab:before {
   height: 0;
   position: absolute;
   left: 50%;
-  bottom: -12px;
+  bottom: -15px;
   margin-left: -15px;
   border-style: solid;
   border-color: #c6defa transparent transparent transparent;
@@ -120,7 +123,7 @@ header .navbar a.active-tab:after {
   height: 0;
   position: absolute;
   left: 50%;
-  bottom: -7px;
+  bottom: -10px;
   margin-left: -8px;
   border-style: solid;
   border-color: #6b9acf transparent transparent transparent;
@@ -436,6 +439,31 @@ aside p {
     padding: 13px 20px 13px;
     background-color: initial;
     width: auto;
+  }
+  header .navbar .nav a:hover {
+    background-color: #7CA7D9;
+  }
+  header .navbar .nav a.active-tab:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    margin-left: -15px;
+    border-style: solid;
+    border-color: #c6defa transparent transparent transparent;
+  }
+  header .navbar .nav a.active-tab:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    margin-left: -8px;
+    border-style: solid;
+    border-color: #6b9acf transparent transparent transparent;
   }
 }
 /*end styles for tablets*/
