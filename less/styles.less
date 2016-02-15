@@ -117,7 +117,7 @@ a {
 /*start styles for header*/
 header {
 	width: 100%;
-	margin: 0 0 50px;
+	margin: 0 0 18px;
 	.logo {
 		padding: 5px 0 5px 0;
 		text-align: center;
@@ -189,7 +189,9 @@ header {
 /*start styles for content*/
 .content-wrap {
 	display: flex;
-	width: 930px;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 95%;
 	margin: 0 auto;
 	padding: 0 0 38px;
 }
@@ -315,7 +317,7 @@ header {
 /*end styles for post-info*/
 
 /*start styles for aside*/
-aside {
+.sidebar {
 	width: 254px;
 	section {
 	margin: 0 0 32px;
@@ -421,6 +423,16 @@ aside {
 				}
 			}
 		}
+		.posts, .sidebar {
+			width: 100%;
+		}
+		.posts{
+			order: 2;
+		}
+		.sidebar{
+			display: none;
+			order: 1;
+		}
 	}
 /*end media for mobile devices*/
 
@@ -469,6 +481,7 @@ aside {
 
 @media screen and (min-device-width: 1024px) {
 	header {
+		margin: 0 0 18px;
 		.logo {
 			padding: 10px 0 15px 0;
 			img {

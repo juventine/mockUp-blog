@@ -60,7 +60,7 @@ a {
 /*start styles for header*/
 header {
   width: 100%;
-  margin: 0 0 50px;
+  margin: 0 0 18px;
 }
 header .logo {
   padding: 5px 0 5px 0;
@@ -153,7 +153,9 @@ header .navbar .navigation-link:before {
 /*start styles for content*/
 .content-wrap {
   display: flex;
-  width: 930px;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 95%;
   margin: 0 auto;
   padding: 0 0 38px;
 }
@@ -280,19 +282,19 @@ header .navbar .navigation-link:before {
 }
 /*end styles for post-info*/
 /*start styles for aside*/
-aside {
+.sidebar {
   width: 254px;
 }
-aside section {
+.sidebar section {
   margin: 0 0 32px;
 }
-aside section .title {
+.sidebar section .title {
   position: relative;
   margin: 0 0 15px;
   padding: 0 0 0 41px;
   border-bottom: 5px solid #6794b7;
 }
-aside section .title:before {
+.sidebar section .title:before {
   display: inline-block;
   position: absolute;
   top: 1px;
@@ -307,7 +309,7 @@ aside section .title:before {
   font-size: 18px;
   text-align: center;
 }
-aside section .title h2 {
+.sidebar section .title h2 {
   padding: 5px 0 1px;
   font-family: 'TrendSansOne';
   font-size: 17px;
@@ -315,13 +317,13 @@ aside section .title h2 {
   color: #6290b4;
   text-transform: uppercase;
 }
-aside section.about .title:before {
+.sidebar section.about .title:before {
   content: '?';
 }
-aside section.some .title:before {
+.sidebar section.some .title:before {
   content: '!';
 }
-aside p {
+.sidebar p {
   line-height: 1.5;
   text-align: justify;
 }
@@ -381,6 +383,17 @@ aside p {
     float: right;
     background-color: initial;
   }
+  .posts,
+  .sidebar {
+    width: 100%;
+  }
+  .posts {
+    order: 2;
+  }
+  .sidebar {
+    display: none;
+    order: 1;
+  }
 }
 /*end media for mobile devices*/
 /*start media for tablets*/
@@ -423,6 +436,9 @@ aside p {
   }
 }
 @media screen and (min-device-width: 1024px) {
+  header {
+    margin: 0 0 18px;
+  }
   header .logo {
     padding: 10px 0 15px 0;
   }
