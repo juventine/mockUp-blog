@@ -172,13 +172,17 @@ header .navbar .navigation-link:before {
 }
 .post {
   width: 100%;
+  position: relative;
+  margin: 0 0 60px;
 }
 .post .post-image img {
   width: 100%;
 }
 .post .post-title {
-  padding: 11px 0;
-  border-bottom: 1px solid #E2E5E8;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  background-color: #f4f5f6;
 }
 .post .post-title a {
   font-family: 'Arial-Narrow', sans-serif;
@@ -205,23 +209,36 @@ header .navbar .navigation-link:before {
   height: 38px;
   border-bottom: 1px solid #E2E5E8;
 }
+.post-info .wrap-date-author {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .post-info .post-date,
 .post-info .post-author {
   display: inline-block;
   padding-left: 23px;
 }
 .post-info .post-date {
-  margin-right: 16px;
+  margin: 0 16px 0 10px;
   background-position: 5px -145px;
 }
 .post-info .post-author {
   background-position: 3px 0px;
+  margin-right: 20px;
 }
 .post-info .post-author:hover .author-name {
   text-decoration: underline;
 }
+.post-social {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+}
 .post-social ul {
   display: flex;
+  justify-content: space-between;
 }
 .post-social ul li {
   height: 24px;
@@ -245,11 +262,12 @@ header .navbar .navigation-link:before {
   font-weight: 800;
   text-decoration: none;
 }
+.post-social ul li a:hover {
+  background-color: #d1dae3;
+}
 .post-social ul li .facebook {
   width: 49px;
   background-position: 10px -63px;
-}
-.post-social ul li .facebook:hover {
   background-color: #3C5A98;
 }
 .post-social ul li .facebook span {
@@ -258,29 +276,21 @@ header .navbar .navigation-link:before {
 .post-social ul li .google-plus {
   width: 41px;
   background-position: 0 -103px;
-}
-.post-social ul li .google-plus:hover {
   background-color: #C25234;
 }
 .post-social ul li .twitter {
   width: 49px;
   background-position: 3px -172px;
-}
-.post-social ul li .twitter:hover {
   background-color: #00ACED;
 }
 .post-social ul li .vk {
   width: 49px;
   background-position: 7px -207px;
-}
-.post-social ul li .vk:hover {
   background-color: #48729E;
 }
 .post-social ul li .yandexBlog {
   width: 41px;
   background-position: 9px -242px;
-}
-.post-social ul li .yandexBlog:hover {
   background-color: #D83933;
 }
 /*end styles for post-info*/
@@ -449,14 +459,6 @@ header .navbar .navigation-link:before {
     margin-left: -8px;
     border-style: solid;
     border-color: #6b9acf transparent transparent transparent;
-  }
-  .content-wrap {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 95%;
-    margin: 0 auto;
-    padding: 0 0 38px;
   }
   .posts {
     width: 640px;
