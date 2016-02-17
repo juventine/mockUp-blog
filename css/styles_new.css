@@ -157,7 +157,6 @@ header .navbar .navigation-link:before {
   justify-content: center;
   width: 93%;
   margin: 0 auto;
-  padding: 0 0 38px;
 }
 .posts,
 .sidebar {
@@ -181,10 +180,14 @@ header .navbar .navigation-link:before {
 .post .post-title {
   display: flex;
   justify-content: center;
-  padding: 12px 0;
+  padding: 10px 40px;
   background-color: #f4f5f6;
 }
 .post .post-title a {
+  display: inline-block;
+  line-height: 1.2;
+  text-align: center;
+  word-wrap: break-word;
   font-family: 'Arial-Narrow', sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
@@ -204,7 +207,6 @@ header .navbar .navigation-link:before {
 /*start styles for post-info*/
 .post-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 38px;
   border-bottom: 1px solid #E2E5E8;
@@ -412,6 +414,54 @@ header .navbar .navigation-link:before {
     padding: 13px 20px 13px;
     background-color: initial;
     width: auto;
+  }
+  .content-wrap {
+    width: 100%;
+  }
+  .post {
+    width: 86%;
+    padding: 0 7%;
+    margin-bottom: 55px;
+  }
+  .post .post-title {
+    justify-content: start;
+    padding: 10px 0;
+    background-color: inherit;
+    border-bottom: 1px solid #E2E5E8;
+  }
+  /*start styles for post-info*/
+  .post-info {
+    border-bottom: 1px solid #E2E5E8;
+  }
+  .post-info .wrap-date-author {
+    justify-content: start;
+  }
+  .post-info .post-date,
+  .post-info .post-author {
+    display: inline-block;
+    padding-left: 23px;
+  }
+  .post-info .post-date {
+    margin: 0 18px 0 5px;
+  }
+  .post-social {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: initial;
+    left: initial;
+    width: auto;
+  }
+  .post-social ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .post-social ul li {
+    margin-bottom: 5px;
+  }
+  .post-social ul li:last-child {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-device-width: 1024px) {
