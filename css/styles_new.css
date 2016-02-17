@@ -26,6 +26,9 @@
 .border-bottom-post {
   border-bottom: 1px solid #E2E5E8;
 }
+.color-social-link-desktop {
+  background-color: #d1dae3;
+}
 .hover-nav-link-bg {
   background-color: #7CA7D9;
 }
@@ -464,6 +467,8 @@ header .navbar .navigation-link:before {
     margin-bottom: 0px;
   }
 }
+/*end styles for tablets*/
+/*start styles for desktops*/
 @media screen and (min-device-width: 1024px) {
   header {
     margin: 0 0 50px;
@@ -481,9 +486,10 @@ header .navbar .navigation-link:before {
     display: none;
   }
   header .navbar .nav a {
-    padding: 13px 20px 13px;
+    padding: 10px 20px 10px;
     background-color: initial;
     width: auto;
+    margin: 3px 0;
   }
   header .navbar .nav a:hover {
     background-color: #7CA7D9;
@@ -494,7 +500,7 @@ header .navbar .navigation-link:before {
     height: 0;
     position: absolute;
     left: 50%;
-    bottom: -12px;
+    bottom: -15px;
     margin-left: -15px;
     border-style: solid;
     border-color: #c6defa transparent transparent transparent;
@@ -505,7 +511,7 @@ header .navbar .navigation-link:before {
     height: 0;
     position: absolute;
     left: 50%;
-    bottom: -7px;
+    bottom: -10px;
     margin-left: -8px;
     border-style: solid;
     border-color: #6b9acf transparent transparent transparent;
@@ -525,6 +531,54 @@ header .navbar .navigation-link:before {
   .post .post-image img {
     height: 100%;
   }
+  .post .post-title {
+    justify-content: left;
+    padding: 10px 0;
+    background-color: initial;
+    border-bottom: 1px solid #E2E5E8;
+  }
+  .post .post-info {
+    justify-content: space-between;
+  }
+  .post-social {
+    position: initial;
+  }
+  .post-social ul {
+    justify-content: flex-end;
+    /*start social links styles*/
+    /*end social links styles*/
+  }
+  .post-social ul a.facebook {
+    background-color: #d1dae3;
+  }
+  .post-social ul a.facebook:hover {
+    background-color: #3C5A98;
+  }
+  .post-social ul a.google-plus {
+    background-color: #d1dae3;
+  }
+  .post-social ul a.google-plus:hover {
+    background-color: #C25234;
+  }
+  .post-social ul a.twitter {
+    background-color: #d1dae3;
+  }
+  .post-social ul a.twitter:hover {
+    background-color: #00ACED;
+  }
+  .post-social ul a.vk {
+    background-color: #d1dae3;
+  }
+  .post-social ul a.vk:hover {
+    background-color: #48729E;
+  }
+  .post-social ul a.yandexBlog {
+    background-color: #d1dae3;
+  }
+  .post-social ul a.yandexBlog:hover {
+    background-color: #D83933;
+  }
+  /*start styles for sidebar*/
   .sidebar {
     display: block;
     order: 2;
@@ -573,7 +627,7 @@ header .navbar .navigation-link:before {
     line-height: 1.5;
     text-align: justify;
   }
-  /*end styles for aside*/
+  /*end styles for sidebar*/
   /*start styles for tags*/
   .tags a {
     display: inline-block;
@@ -616,4 +670,4 @@ header .navbar .navigation-link:before {
   }
   /*end styles for tags*/
 }
-/*end styles for tablets*/
+/*end styles for desktops*/

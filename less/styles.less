@@ -53,6 +53,10 @@
 	border-bottom: 1px solid @color_post_info_border;
 }
 
+.color-social-link-desktop {
+	background-color: @color_social_links;
+}
+
 .hover-nav-link-bg {
 	background-color: @color_nav_link_hover;
 }
@@ -300,7 +304,7 @@ header {
 				font-weight: 800;
 				text-decoration: none;
 				&:hover {
-				background-color: @color-social-links-bg;
+					background-color: @color-social-links-bg;
 				}
 			}
 
@@ -509,7 +513,9 @@ header {
 			}
 		}
 	}
+/*end styles for tablets*/
 
+/*start styles for desktops*/
 @media screen and (min-device-width: 1024px) {
 	header {
 		margin: 0 0 50px;
@@ -526,17 +532,18 @@ header {
 			}
 			.nav {
 				a {
-					padding: 13px 20px 13px;
+					padding: 10px 20px 10px;
 					background-color: initial;
 					width: auto;
+					margin: 3px 0;
 					&:hover {
 						.hover-nav-link-bg;
 					}
 					&.active-tab:before {
-						.pseudo-active-tab(@bottom: -12px);
+						.pseudo-active-tab(@bottom: -15px);
 					}
 					&.active-tab:after {
-						.pseudo-active-tab(@bottom: -7px, @margin-left: -8px, @border-color-top: #6b9acf);
+						.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
 					}
 				}
 			}
@@ -550,14 +557,64 @@ header {
 
 	.post {
 		margin: 0 0 39px;
-	.post-image {
-		width: 100%;
-		height: 230px;
-		img {
-			height: 100%;
+		.post-image {
+			width: 100%;
+			height: 230px;
+			img {
+				height: 100%;
+			}
+		}
+		.post-title {
+			justify-content: left;
+			padding: 10px 0;
+			background-color: initial;
+			.border-bottom-post;
+		}
+		.post-info {
+			justify-content: space-between;
 		}
 	}
+
+	.post-social	{
+		position: initial;
+		ul {
+			justify-content: flex-end;
+			/*start social links styles*/
+			a.facebook {
+				.color-social-link-desktop;
+				&:hover {
+					background-color: @color_facebook_link;
+				}
+			}
+			a.google-plus {
+				.color-social-link-desktop;
+				&:hover {
+					background-color: @color_google_plus_link;
+				}
+			}
+			a.twitter {
+				.color-social-link-desktop;
+				&:hover {
+					background-color: @color_twitter_link;
+				}
+			}
+			a.vk {
+				.color-social-link-desktop;
+				&:hover {
+					background-color: @color_vk_link;
+				}
+			}
+			a.yandexBlog {
+				.color-social-link-desktop;
+				&:hover {
+					background-color: @color_yandexBlog_link;
+				}
+			}
+			/*end social links styles*/
+		}
 	}
+
+/*start styles for sidebar*/
 	.sidebar {
 		display: block;
 		order: 2;
@@ -609,7 +666,7 @@ header {
 		.paragraph-text
 		}
 	}
-/*end styles for aside*/
+/*end styles for sidebar*/
 /*start styles for tags*/
 .tags a {
 	display: inline-block;
@@ -644,4 +701,4 @@ header {
 }
 /*end styles for tags*/
 }
-/*end styles for tablets*/
+/*end styles for desktops*/
