@@ -26,7 +26,6 @@
 
 /*start variables*/
 @color_base : #ffffff;
-@color_social_links : #d1dae3;
 @color_post_title : #69747c;
 @color_tags_hover : #b2d4ec;
 @color_nav_link_hover : #7CA7D9;
@@ -53,8 +52,11 @@
 	border-bottom: 1px solid @color_post_info_border;
 }
 
-.color-social-link-desktop {
-	background-color: @color_social_links;
+.color-social-link-desktop(@color_social_link_hover) {
+	background-color: @color-social-links-bg;
+	&:hover {
+		background-color: @color_social_link_hover;
+	}
 }
 
 .hover-nav-link-bg {
@@ -581,34 +583,19 @@ header {
 			justify-content: flex-end;
 			/*start social links styles*/
 			a.facebook {
-				.color-social-link-desktop;
-				&:hover {
-					background-color: @color_facebook_link;
-				}
+				.color-social-link-desktop(@color_facebook_link);
 			}
 			a.google-plus {
-				.color-social-link-desktop;
-				&:hover {
-					background-color: @color_google_plus_link;
-				}
+				.color-social-link-desktop(@color_google_plus_link);
 			}
 			a.twitter {
-				.color-social-link-desktop;
-				&:hover {
-					background-color: @color_twitter_link;
-				}
+				.color-social-link-desktop(@color_twitter_link);
 			}
 			a.vk {
-				.color-social-link-desktop;
-				&:hover {
-					background-color: @color_vk_link;
-				}
+				.color-social-link-desktop(@color_vk_link);
 			}
 			a.yandexBlog {
-				.color-social-link-desktop;
-				&:hover {
-					background-color: @color_yandexBlog_link;
-				}
+				.color-social-link-desktop(@color_yandexBlog_link);
 			}
 			/*end social links styles*/
 		}
