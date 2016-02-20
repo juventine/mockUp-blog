@@ -72,6 +72,9 @@ a {
 .hide.display {
   display: block;
 }
+.display-flex {
+  display: flex;
+}
 /*end styles for helper classes*/
 /*start styles for header*/
 header {
@@ -235,7 +238,6 @@ header .navbar .link-nav:before {
   padding-left: 23px;
 }
 .post-info .post-date {
-  margin: 0 16px 0 10px;
   background-position: 5px -145px;
 }
 .post-info .post-author {
@@ -337,13 +339,13 @@ header .navbar .link-nav:before {
 .sidebar p {
   line-height: 1.5;
   text-align: justify;
-  color: #6689a5;
+  @paragraph _text_mobiles;
 }
 .sidebar .tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px 3.5% 35px;
+  padding: 20px 3.5% 10px;
 }
 .sidebar .tags a {
   margin: 0px 16px 5px 0;
@@ -391,8 +393,31 @@ header .navbar .link-nav:before {
 /*start styles for media*/
 /*start media for mobile devices*/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .navbar {
+    border-bottom: none;
+  }
   header .navbar .nav {
     display: none;
+    flex-direction: column;
+    background-color: #e1eefc;
+  }
+  header .navbar .nav li {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #fff;
+  }
+  header .navbar .nav li:first-child {
+    border-top: none;
+  }
+  header .navbar .nav li a {
+    display: block;
+    position: static;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    background-color: initial;
+    color: #6b9ad0;
   }
   header .navbar a.link-tabs:before {
     display: inline-block;
@@ -401,9 +426,12 @@ header .navbar .link-nav:before {
     float: right;
     background-color: initial;
   }
-  /*start styles for tags*/
-  .tags a {
-    opacity: 0.8;
+  .sidebar {
+    /*start styles for tags*/
+  }
+  .sidebar .tags a {
+    margin-bottom: 10px;
+    opacity: 0.6;
   }
 }
 /*end media for mobile devices*/
