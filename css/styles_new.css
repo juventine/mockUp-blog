@@ -23,6 +23,10 @@
   line-height: 1.5;
   text-align: justify;
 }
+.tablet-post-aside {
+  width: 86%;
+  padding: 0 7%;
+}
 .border-bottom-post {
   border-bottom: 1px solid #E2E5E8;
 }
@@ -55,6 +59,12 @@ a {
 .sprite {
   background-image: url('../images/spritesheet.png');
   background-repeat: no-repeat;
+}
+.display {
+  display: block;
+}
+.hide {
+  display: none;
 }
 /*end styles for helper classes*/
 /*start styles for header*/
@@ -129,7 +139,7 @@ header .navbar a.active-tab:after {
   border-color: #6b9acf transparent transparent transparent;
   border-width: 7px 8.5px 0 8.5px;
 }
-header .navbar .tabs-nav-link:before {
+header .navbar .link-tabs:before {
   content: '';
   width: 18px;
   height: 18px;
@@ -137,11 +147,11 @@ header .navbar .tabs-nav-link:before {
   margin-top: 6px;
   background-image: url('../images/tag.png');
 }
-header .navbar .navigation-link {
+header .navbar .link-nav {
   margin-right: 3px;
   background-color: none;
 }
-header .navbar .navigation-link:before {
+header .navbar .link-nav:before {
   display: inline-block;
   content: '';
   width: 18px;
@@ -368,10 +378,10 @@ header .navbar .navigation-link:before {
   header .navbar .nav {
     display: none;
   }
-  header .navbar a.tabs-nav-link:before {
+  header .navbar a.link-tabs:before {
     display: inline-block;
   }
-  header .navbar a.navigation-link {
+  header .navbar a.link-nav {
     float: right;
     background-color: initial;
   }
@@ -398,11 +408,11 @@ header .navbar .navigation-link:before {
     text-decoration: none;
     font-size: 18px;
   }
-  header .navbar a.some-nav-link {
+  header .navbar a.link-some {
     order: 1;
   }
-  header .navbar a.tabs-nav-link,
-  header .navbar a.navigation-link {
+  header .navbar a.link-tabs,
+  header .navbar a.link-some {
     display: none;
   }
   header .navbar .nav {
@@ -463,6 +473,29 @@ header .navbar .navigation-link:before {
   .post-social ul li:last-child {
     margin-bottom: 0px;
   }
+  /*start styles for sidebar*/
+  .sidebar {
+    display: block;
+    width: 86%;
+    padding: 0 7%;
+  }
+  .sidebar section {
+    display: none;
+    margin: 0 0 32px;
+  }
+  .sidebar section p {
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .sidebar .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sidebar .tags a {
+    margin: 0px 16px 5px 0;
+  }
+  /*end styles for sidebar*/
 }
 /*end styles for tablets*/
 /*start styles for desktops*/
