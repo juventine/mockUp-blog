@@ -11,24 +11,41 @@ $(document).ready(function() {
 	var sidebarContainer = $(sidebar).children();
 
 	$(navbarLinks).on('click', function() {
-		$(nav).hide();
 		var linkClass = $(this).attr('class');
-		$(linkClass).addClass(activeTab);
-		$(sidebar).show();
-		sidebarContainer.hide();
-		sidebarContainer.filter('.' + linkClass).show();
+		/* check is user click on the active tab or no.
+			 if click on active tab -- ignor action
+		*/
+		if ((linkClass.indexOf(activeTab) == -1) && (('.' + linkClass) != linkNav)) {
+			$(nav).hide();
+			$(sidebar).show();
+			sidebarContainer.hide();
+			sidebarContainer.filter('.' + linkClass).show();
+			setClassActiveTab(this);
+		}
+
+		if ((linkClass.indexOf(activeTab) == -1) && ('.' + linkClass) == linkNav ) {
+			hideSidebar();
+			$(nav).css('display', 'flex');
+			setClassActiveTab(this);
+		}
 	});
 
-	$(linkNav).on('click', function() {
-		hideSidebar();
-		$(nav).css('display', 'flex');
-	});
-
+	// folding sidebar-area
 	$(sidebarTitle).on('click', hideSidebar);
 	$(foldIcon).on('click', hideSidebar);
 
-	function hideSidebar() {
-		$(sidebar).hide();
+	function setClassActiveTab(active) {
+		var currentActiveTab = active;
+		removeClassActiveTab();
+		$(active).toggleClass(activeTab);
 	}
 
+	function hideSidebar() {
+		$(sidebar).hide();
+		removeClassActiveTab();
+	}
+
+	function removeClassActiveTab() {
+		$(navbarLinks).removeClass(activeTab);
+	}
 });

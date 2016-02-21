@@ -184,7 +184,7 @@ header {
 			height: 30px;
 			line-height: 30px;
 			padding: 0;
-			margin-left: 3px;
+			margin: 2px 0 2px 3px;
 			color: @color_base;
 			font-family: "Arial-Narrow";
 			font-size: 18px;
@@ -193,32 +193,34 @@ header {
 			background-color: #7ca7d9;
 			text-transform: uppercase;
 			text-decoration: none;
-		&:hover {
-			.hover-nav-link-bg;
-			text-decoration: none;
+			&:hover {
+				.hover-nav-link-bg;
+				text-decoration: none;
+			}
+			&.active-tab:before {
+				.pseudo-active-tab(@bottom: -10px, @margin-left: -10px, @border-color-top:	#6b9ad0);
+				border-width: 8px 10px 0 10px;
+			}
+			&.active-tab:after {
+				.pseudo-active-tab(@bottom: -7px, @margin-left: -7px, @border-color-top: #7ca7d9);
+				border-width: 7px 7px 0 7px;
+			}
 		}
-		&.active-tab:before {
-			.pseudo-active-tab;
-			border-width: 12px 15px 0 15px;
-		}
-		&.active-tab:after {
-			.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
-			border-width: 7px 8.5px 0 8.5px;
-		}
-		}
-		.tags:before {
-			.pseudo(@width: 18px, @height: 18px, @position: absolute);
-			.positioning-top-right(@top: 6px, @right: 6px);
+		.tags {
 			background-image: url('../images/tag.png');
+			background-repeat: no-repeat;
+			background-position: 5px;
 		}
 		.link-nav {
 			margin-right: 3px;
-			background-color: none;
-		&:before {
-			display: inline-block;
-			.pseudo(@width: 18px, @height: 10px, @position: static);
-			background-image: url('../images/thumbnail.png');
-		}
+			background: url('../images/thumbnail.png') no-repeat 5px;
+			&.active-tab:before {
+				display: none;
+			}
+			&.active-tab:after {
+				.pseudo-active-tab(@bottom: -10px, @margin-left: -10px, @border-color-top:	#6b9ad0);
+				border-width: 8px 10px 0 10px;
+			}
 		}
 	}
 }
@@ -483,16 +485,20 @@ header {
 			}
 		}
 		.sidebar {
-			h2 {
-				position: relative;
-				&:after {
-					.pseudo-fold-icon;
+			.title {
+				cursor: pointer;
+				h2 {
+					position: relative;
+					&:after {
+						.pseudo-fold-icon;
+					}
 				}
 			}
 		/*start styles for tags*/
 			.tags {
 				position: relative;
 				.fold-icon {
+					cursor: pointer;
 					.pseudo-fold-icon(@top: initial, @right: 15px);
 					bottom: 10px;
 				}
@@ -645,9 +651,11 @@ header {
 					}
 					&.active-tab:before {
 						.pseudo-active-tab(@bottom: -15px);
+						border-width: 12px 15px 0 15px;
 					}
 					&.active-tab:after {
 						.pseudo-active-tab(@bottom: -10px, @margin-left: -8px, @border-color-top: #6b9acf);
+						border-width: 7px 8.5px 0 8.5px;
 					}
 				}
 			}
