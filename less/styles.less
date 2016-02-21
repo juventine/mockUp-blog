@@ -96,6 +96,12 @@
 	right: @right;
 }
 
+.pseudo-fold-icon(@top: 0 ,@right: 2px) {
+	.pseudo(@width: 16px, @height: 17px);
+	.positioning-top-right(@top, @right);
+	background-image: url('../images/fold.png');
+	background-repeat: no-repeat;
+}
 /*end styles for mixins*/
 
 html {
@@ -373,11 +379,11 @@ header {
 		padding: 20px 3.5% 30px;
 		.title {
 			bottom: 5px;
-			right: 3.5%;
+			right: 1.5%;
 			position: absolute;
 			display: inline-block;
 			h2 {
-				padding: 5px 0 1px;
+				padding: 5px 25px 0 0;
 				font-family: 'TrendSansOne';
 				font-size: 17px;
 				font-weight: bold;
@@ -394,7 +400,7 @@ header {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding: 20px 3.5% 10px;
+		padding: 20px 3.5%;
 		a {
 			margin: 0px 16px 5px 0;
 		}
@@ -477,10 +483,23 @@ header {
 			}
 		}
 		.sidebar {
+			h2 {
+				position: relative;
+				&:after {
+					.pseudo-fold-icon;
+				}
+			}
 		/*start styles for tags*/
-			.tags a {
-				margin-bottom: 10px;
-				opacity: 0.6;
+			.tags {
+				position: relative;
+				.fold-icon {
+					.pseudo-fold-icon(@top: initial, @right: 15px);
+					bottom: 10px;
+				}
+				a {
+					margin-bottom: 10px;
+					opacity: 0.6;
+				}
 			}
 		}
 	}

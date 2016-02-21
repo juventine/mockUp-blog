@@ -324,12 +324,12 @@ header .navbar .link-nav:before {
 }
 .sidebar section .title {
   bottom: 5px;
-  right: 3.5%;
+  right: 1.5%;
   position: absolute;
   display: inline-block;
 }
 .sidebar section .title h2 {
-  padding: 5px 0 1px;
+  padding: 5px 25px 0 0;
   font-family: 'TrendSansOne';
   font-size: 17px;
   font-weight: bold;
@@ -345,7 +345,7 @@ header .navbar .link-nav:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 3.5% 10px;
+  padding: 20px 3.5%;
 }
 .sidebar .tags a {
   margin: 0px 16px 5px 0;
@@ -428,6 +428,33 @@ header .navbar .link-nav:before {
   }
   .sidebar {
     /*start styles for tags*/
+  }
+  .sidebar h2 {
+    position: relative;
+  }
+  .sidebar h2:after {
+    content: '';
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    background-image: url('../images/fold.png');
+    background-repeat: no-repeat;
+  }
+  .sidebar .tags {
+    position: relative;
+  }
+  .sidebar .tags .fold-icon {
+    content: '';
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    top: initial;
+    right: 15px;
+    background-image: url('../images/fold.png');
+    background-repeat: no-repeat;
+    bottom: 10px;
   }
   .sidebar .tags a {
     margin-bottom: 10px;
