@@ -8,6 +8,7 @@ $(document).ready(function() {
 	var sidebarTitle = '.title';
 	var foldIcon = '.fold-icon';
 	var tags = '.sidebar .tags';
+	var navTabs = '.nav a';
 
 	var sidebarContainer = $(sidebar).children();
 
@@ -41,6 +42,13 @@ $(document).ready(function() {
 	$(sidebarTitle).on('click', hideSidebar);
 	$(foldIcon).on('click', hideSidebar);
 
+	/*set class active-tab to tabs from nav*/
+	$(navTabs).click( function() {
+		$(navTabs).removeClass(activeTab);
+		$(this).toggleClass(activeTab);
+	})
+
+	/*set class active-tab to tabs from navbar(not fron nav)*/
 	function setClassActiveTab(active) {
 		var currentActiveTab = active;
 		removeClassActiveTab();
