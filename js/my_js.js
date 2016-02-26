@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var activeTab = 'active-tab';
 	var sidebarTitle = '.title';
 	var foldIcon = '.fold-icon';
+	var tags = '.sidebar .tags';
 
 	var sidebarContainer = $(sidebar).children();
 
@@ -16,7 +17,9 @@ $(document).ready(function() {
 			 if click on active tab -- ignor action
 		*/
 		if ((linkClass.indexOf(activeTab) == -1) && (('.' + linkClass) != linkNav)) {
-			$(nav).hide();
+			if (($(window).width() <= '767')) {
+				$(nav).hide();
+			}
 			$(sidebar).show();
 			sidebarContainer.hide();
 			sidebarContainer.filter('.' + linkClass).show();
@@ -27,6 +30,10 @@ $(document).ready(function() {
 			hideSidebar();
 			$(nav).css('display', 'flex');
 			setClassActiveTab(this);
+		}
+
+		if (($(window).width() >= '768') && ($(window).width() < '1024')) {
+			$(tags).show();
 		}
 	});
 

@@ -33,6 +33,30 @@
 .hover-nav-link-bg {
   background-color: #7CA7D9;
 }
+.active-tab-style.active-tab:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -15px;
+  border-style: solid;
+  border-color: #c6defa transparent transparent transparent;
+  border-width: 12px 15px 0 15px;
+}
+.active-tab-style.active-tab:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -8px;
+  border-style: solid;
+  border-color: #6b9acf transparent transparent transparent;
+  border-width: 7px 8.5px 0 8.5px;
+}
 /*end styles for mixins*/
 html {
   min-height: 100%;
@@ -507,6 +531,30 @@ header .navbar .link-nav.active-tab:after {
     background-color: initial;
     width: auto;
   }
+  header .navbar .nav a.active-tab:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    margin-left: -15px;
+    border-style: solid;
+    border-color: #c6defa transparent transparent transparent;
+    border-width: 12px 15px 0 15px;
+  }
+  header .navbar .nav a.active-tab:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -8px;
+    border-style: solid;
+    border-color: #6b9acf transparent transparent transparent;
+    border-width: 7px 8.5px 0 8.5px;
+  }
   .content-wrap {
     width: 100%;
   }
@@ -558,12 +606,14 @@ header .navbar .link-nav.active-tab:after {
   /*start styles for sidebar*/
   .sidebar {
     display: block;
+    background-color: #fff;
     width: 86%;
     padding: 0 7%;
   }
   .sidebar section {
     display: none;
-    margin: 0 0 32px;
+    margin: 0;
+    padding-bottom: 0;
   }
   .sidebar section p {
     line-height: 1.5;
