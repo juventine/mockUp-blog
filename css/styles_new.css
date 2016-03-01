@@ -205,7 +205,6 @@ header .navbar .link-nav.active-tab:after {
   margin: 0 auto;
 }
 .posts {
-  width: 93%;
   margin-top: 18px;
   order: 2;
 }
@@ -559,8 +558,8 @@ header .navbar .link-nav.active-tab:after {
     width: 100%;
   }
   .post {
-    width: 86%;
-    padding: 0 7%;
+    padding: 0 60px;
+    box-sizing: border-box;
     margin-bottom: 55px;
   }
   .post .post-title {
@@ -586,7 +585,7 @@ header .navbar .link-nav.active-tab:after {
   }
   .post-social {
     position: absolute;
-    right: -4%;
+    right: 0;
     top: 0;
     bottom: initial;
     left: initial;
@@ -619,11 +618,36 @@ header .navbar .link-nav.active-tab:after {
     right: inherit;
     bottom: inherit;
     cursor: pointer;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     background-color: #eef4fa;
   }
   .sidebar section .title h2 {
-    padding: 13px 20px 13px 30px;
+    padding: 13px 30px 13px 20px;
+    color: #6290b4;
+  }
+  .sidebar section .title:before {
+    content: '';
+    width: 0;
+    height: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    border-style: solid;
+    border-width: 9px 9px 9px 0;
+    border-color: transparent #c6defa transparent transparent;
+  }
+  .sidebar section .title:after {
+    content: '';
+    width: 0;
+    height: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    border-style: solid;
+    border-width: 4px 4px 4px 0;
+    border-color: transparent #6b9ad0 transparent transparent;
   }
   .sidebar section.about .title {
     left: -38px;

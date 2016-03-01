@@ -115,6 +115,16 @@
 		border-width: 7px 8.5px 0 8.5px;
 	}
 }
+
+.title-triangle(@margin-top, @border-width, @border-color-right ) {
+	right: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: @margin-top;
+	border-style: solid;
+	border-width: @border-width @border-width @border-width 0;
+	border-color: transparent @border-color-right transparent transparent;
+}
 /*end styles for mixins*/
 
 html {
@@ -253,7 +263,7 @@ header {
 }
 
 .posts {
-	width: 93%;
+	// width: 93%;
 	margin-top: 18px;
 	order: 2;
 }
@@ -574,7 +584,8 @@ header {
 			width: 100%;
 		}
 		.post {
-			.tablet-post-aside;
+			padding: 0 60px;
+			box-sizing: border-box;
 			margin-bottom: 55px;
 			.post-title {
 				justify-content: start;
@@ -600,7 +611,7 @@ header {
 
 		.post-social {
 			position: absolute;
-			right: -4%;
+			right: 0;
 			top: 0;
 			bottom: initial;
 			left: initial;
@@ -631,10 +642,19 @@ header {
 					right: inherit;
 					bottom: inherit;
 					cursor: pointer;
-					transform: rotate(90deg);
+					transform: rotate(-90deg);
 					background-color: @color_active_link_tag_bg;
 					h2 {
-						padding: 13px 20px 13px 30px;
+						padding: 13px 30px 13px 20px;
+						color: @color_active_link_tag;
+					}
+					&:before {
+						.pseudo;
+						.title-triangle(@margin-top: -9px, @border-width: 9px, @border-color-right: #c6defa);
+					}
+					&:after {
+						.pseudo;
+						.title-triangle(@margin-top: -4px, @border-width: 4px, @border-color-right: #6b9ad0);
 					}
 				}
 				&.about {
