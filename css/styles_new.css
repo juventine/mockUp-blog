@@ -513,6 +513,12 @@ header .navbar .link-nav.active-tab:after {
     text-decoration: none;
     font-size: 18px;
   }
+  header .navbar a.about,
+  header .navbar a.some {
+    padding: 12px 0;
+    font-size: 20px;
+    color: #608dc1;
+  }
   header .navbar a.some {
     order: 1;
   }
@@ -556,6 +562,9 @@ header .navbar .link-nav.active-tab:after {
   }
   .content-wrap {
     width: 100%;
+  }
+  .posts {
+    margin-top: 0;
   }
   .post {
     padding: 0 60px;
@@ -658,7 +667,7 @@ header .navbar .link-nav.active-tab:after {
     top: 58px;
   }
   .sidebar section p {
-    padding: 20px 60px 30px;
+    padding: 20px 60px 0;
     line-height: 1.5;
     text-align: justify;
   }
@@ -666,6 +675,7 @@ header .navbar .link-nav.active-tab:after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 30px 60px;
   }
   .sidebar .tags a {
     margin: 0px 16px 5px 0;
