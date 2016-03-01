@@ -263,8 +263,8 @@ header {
 }
 
 .posts {
-	// width: 93%;
 	margin-top: 18px;
+	padding: 0 16px;
 	order: 2;
 }
 
@@ -405,10 +405,10 @@ header {
 	section {
 		position: relative;
 		margin: 0;
-		padding: 20px 3.5% 30px;
+		padding: 20px 16px 30px;
 		.title {
 			bottom: 5px;
-			right: 1.5%;
+			right: 8px;
 			position: absolute;
 			display: inline-block;
 			h2 {
@@ -780,6 +780,7 @@ header {
 		display: block;
 		order: 2;
 		width: 254px;
+		background-color: inherit;
 		section {
 			margin: 0 0 32px;
 			.title {
@@ -812,52 +813,55 @@ header {
 					text-transform: uppercase;
 				}
 			}
-		section.about .title {
-			&:before {
-				content: '?';
+			&.about .title {
+				&:before {
+					content: '?';
+				}
 			}
-		}
-		section.some .title{
-			&:before {
-				content: '!';
+			&.some .title {
+				&:before {
+					content: '!';
+				}
 			}
-		}
 		p {
 			.paragraph-text
 		}
 	}
 /*end styles for sidebar*/
 /*start styles for tags*/
-	.tags a {
-		display: inline-block;
-		position: relative;
-		margin: 0 10px 5px 0;
-		padding: 4px 20px 3px 13px;
-		background-color: @color_aside_border_tags;
-		color: @color_base;
-		text-decoration: none;
-		&:hover {
-			background-color: @color_tags_hover;
-			&:after {
-				border-color: transparent transparent transparent @color_tags_hover;
+	.tags
+		display: inherit;
+		padding: 0;
+		a {
+			display: inline-block;
+			position: relative;
+			margin: 0 10px 5px 0;
+			padding: 4px 20px 3px 13px;
+			background-color: @color_aside_border_tags;
+			color: @color_base;
+			text-decoration: none;
+			&:hover {
+				background-color: @color_tags_hover;
+				&:after {
+					border-color: transparent transparent transparent @color_tags_hover;
+				}
 			}
-		}
-		&:before {
-			.pseudo(@width: 7px, @height: 7px);
-			.positioning-top-right(5px, 0);
-			border-radius: 7px;
-			background-color: @color_base;
-		}
-		&:after {
-			.pseudo;
-			.positioning-top-right(0px, -9px);
-			border-style: solid;
-			border-width: 9px 0 10px 9px;
-			border-color: transparent transparent transparent @color_aside_border_tags;
-		}
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
+			&:before {
+				.pseudo(@width: 7px, @height: 7px);
+				.positioning-top-right(5px, 0);
+				border-radius: 7px;
+				background-color: @color_base;
+			}
+			&:after {
+				.pseudo;
+				.positioning-top-right(0px, -9px);
+				border-style: solid;
+				border-width: 9px 0 10px 9px;
+				border-color: transparent transparent transparent @color_aside_border_tags;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
 	}
 /*end styles for tags*/
 }
