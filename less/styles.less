@@ -210,9 +210,6 @@ header {
 			background-color: #7ca7d9;
 			text-transform: uppercase;
 			text-decoration: none;
-			.about-tag, .some-tag {
-				display: none;
-			}
 			&:hover {
 				.hover-nav-link-bg;
 				text-decoration: none;
@@ -553,54 +550,9 @@ header {
 					padding: 13px 0;
 					text-decoration: none;
 					font-size: 18px;
-					// .about-tag, .some-tag {
-					// 	position: absolute;
-					// 	display: inline-block;
-					// 	transform: rotate(90deg);
-					// 	padding: 10px 20px 10px 30px;
-					// 	color: @color_active_link_tag;
-					// 	background-color: @color_active_link_tag_bg;
-					// 	font-family: 'TrendSansOne';
-					// 	font-size: 17px;
-					// 	font-weight: bold;
-					// }
-					// .about-tag {
-					// 	bottom: -87px;
-					// 	left: -36px;
-					// }
-					// .some-tag {
-					// 	bottom: -82px;
-					// 	right: -34px;
-					// }
-				}
-				a.some, a.about {
-					position: relative;
-					&.active-tab span:after {
-						position: absolute;
-						display: inline-block;
-						transform: rotate(90deg);
-						padding: 10px 20px 10px 30px;
-						color: @color_active_link_tag;
-						background-color: @color_active_link_tag_bg;
-						font-family: 'TrendSansOne';
-						font-size: 17px;
-						font-weight: bold;
-					}
 				}
 				a.some {
 					order: 1;
-					&.active-tab span:after {
-						content: 'Some';
-						bottom: -82px;
-						right: -34px;
-					}
-				}
-				a.about {
-					&.active-tab span:after {
-						content: 'Some';
-						bottom: -87px;
-						left: -36px;
-					}
 				}
 				a.tags, a.link-nav {
 					display: none;
@@ -618,11 +570,9 @@ header {
 				}
 			}
 		}
-
 		.content-wrap {
 			width: 100%;
 		}
-
 		.post {
 			.tablet-post-aside;
 			margin-bottom: 55px;
@@ -670,13 +620,37 @@ header {
 /*start styles for sidebar*/
 		.sidebar {
 			display: block;
+			width: 100%;
+			padding: 0;
 			background-color: #fff;
-			.tablet-post-aside;
 			section {
 				display: none;
 				margin: 0;
-				padding-bottom: 0;
+				padding: 0;
+				.title {
+					right: inherit;
+					bottom: inherit;
+					cursor: pointer;
+					transform: rotate(90deg);
+					background-color: @color_active_link_tag_bg;
+					h2 {
+						padding: 13px 20px 13px 30px;
+					}
+				}
+				&.about {
+					.title {
+						left: -38px;
+						top: 38px;
+					}
+				}
+				&.some {
+					.title {
+						right: -58px;
+						top: 58px;
+					}
+				}
 				p {
+					padding: 20px 60px 30px;
 					.paragraph-text
 				}
 			}

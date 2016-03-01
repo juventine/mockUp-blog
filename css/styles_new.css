@@ -143,10 +143,6 @@ header .navbar a {
   text-transform: uppercase;
   text-decoration: none;
 }
-header .navbar a .about-tag,
-header .navbar a .some-tag {
-  display: none;
-}
 header .navbar a:hover {
   background-color: #7CA7D9;
   text-decoration: none;
@@ -518,34 +514,8 @@ header .navbar .link-nav.active-tab:after {
     text-decoration: none;
     font-size: 18px;
   }
-  header .navbar a.some,
-  header .navbar a.about {
-    position: relative;
-  }
-  header .navbar a.some.active-tab span:after,
-  header .navbar a.about.active-tab span:after {
-    position: absolute;
-    display: inline-block;
-    transform: rotate(90deg);
-    padding: 10px 20px 10px 30px;
-    color: #6290b4;
-    background-color: #eef4fa;
-    font-family: 'TrendSansOne';
-    font-size: 17px;
-    font-weight: bold;
-  }
   header .navbar a.some {
     order: 1;
-  }
-  header .navbar a.some.active-tab span:after {
-    content: 'Some';
-    bottom: -82px;
-    right: -34px;
-  }
-  header .navbar a.about.active-tab span:after {
-    content: 'Some';
-    bottom: -87px;
-    left: -36px;
   }
   header .navbar a.tags,
   header .navbar a.link-nav {
@@ -636,16 +606,35 @@ header .navbar .link-nav.active-tab:after {
   /*start styles for sidebar*/
   .sidebar {
     display: block;
+    width: 100%;
+    padding: 0;
     background-color: #fff;
-    width: 86%;
-    padding: 0 7%;
   }
   .sidebar section {
     display: none;
     margin: 0;
-    padding-bottom: 0;
+    padding: 0;
+  }
+  .sidebar section .title {
+    right: inherit;
+    bottom: inherit;
+    cursor: pointer;
+    transform: rotate(90deg);
+    background-color: #eef4fa;
+  }
+  .sidebar section .title h2 {
+    padding: 13px 20px 13px 30px;
+  }
+  .sidebar section.about .title {
+    left: -38px;
+    top: 38px;
+  }
+  .sidebar section.some .title {
+    right: -58px;
+    top: 58px;
   }
   .sidebar section p {
+    padding: 20px 60px 30px;
     line-height: 1.5;
     text-align: justify;
   }
