@@ -143,6 +143,10 @@ header .navbar a {
   text-transform: uppercase;
   text-decoration: none;
 }
+header .navbar a .about-tag,
+header .navbar a .some-tag {
+  display: none;
+}
 header .navbar a:hover {
   background-color: #7CA7D9;
   text-decoration: none;
@@ -514,8 +518,34 @@ header .navbar .link-nav.active-tab:after {
     text-decoration: none;
     font-size: 18px;
   }
+  header .navbar a.some,
+  header .navbar a.about {
+    position: relative;
+  }
+  header .navbar a.some.active-tab span:after,
+  header .navbar a.about.active-tab span:after {
+    position: absolute;
+    display: inline-block;
+    transform: rotate(90deg);
+    padding: 10px 20px 10px 30px;
+    color: #6290b4;
+    background-color: #eef4fa;
+    font-family: 'TrendSansOne';
+    font-size: 17px;
+    font-weight: bold;
+  }
   header .navbar a.some {
     order: 1;
+  }
+  header .navbar a.some.active-tab span:after {
+    content: 'Some';
+    bottom: -82px;
+    right: -34px;
+  }
+  header .navbar a.about.active-tab span:after {
+    content: 'Some';
+    bottom: -87px;
+    left: -36px;
   }
   header .navbar a.tags,
   header .navbar a.link-nav {
@@ -586,7 +616,7 @@ header .navbar .link-nav.active-tab:after {
   }
   .post-social {
     position: absolute;
-    right: 0;
+    right: -4%;
     top: 0;
     bottom: initial;
     left: initial;

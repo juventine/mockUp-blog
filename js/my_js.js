@@ -4,11 +4,15 @@ $(document).ready(function() {
 	var nav = '.nav';
 	var linkNav = '.link-nav';
 	var display = 'display';
+	var displayInlineBlock ='display-inline-block'
 	var activeTab = 'active-tab';
 	var sidebarTitle = '.title';
 	var foldIcon = '.fold-icon';
 	var tags = '.sidebar .tags';
 	var navTabs = '.nav a';
+	var aboutTag = '.about-tag';
+	var someTag = '.some-tag';
+
 
 	var sidebarContainer = $(sidebar).children();
 
@@ -35,6 +39,7 @@ $(document).ready(function() {
 
 		if (($(window).width() >= '768') && ($(window).width() < '1024')) {
 			$(tags).show();
+
 		}
 	});
 
