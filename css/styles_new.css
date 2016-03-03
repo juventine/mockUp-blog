@@ -99,6 +99,16 @@ a {
 .display-flex {
   display: flex;
 }
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+.logo-navbar-desktop {
+  background: url('../images/logo-navbar-desktop.png') no-repeat 20px;
+}
 /*end styles for helper classes*/
 /*start styles for header*/
 header {
@@ -561,6 +571,9 @@ header .navbar .link-nav.active-tab:after {
     border-color: #6b9acf transparent transparent transparent;
     border-width: 7px 8.5px 0 8.5px;
   }
+  header .navbar .nav a:hover {
+    background-color: #7CA7D9;
+  }
   .content-wrap {
     width: 100%;
   }
@@ -701,6 +714,10 @@ header .navbar .link-nav.active-tab:after {
   header .navbar > a {
     display: none;
   }
+  header .navbar .nav {
+    width: 980px;
+    margin: 0 auto;
+  }
   header .navbar .nav a {
     padding: 10px 20px 10px;
     background-color: initial;
@@ -802,12 +819,11 @@ header .navbar .link-nav.active-tab:after {
     order: 2;
     width: 254px;
     background-color: inherit;
-    /*end styles for sidebar*/
     /*start styles for tags*/
-    /*end styles for tags*/
   }
   .sidebar section {
     margin: 0 0 32px;
+    padding: 0;
   }
   .sidebar section .title {
     display: block;
@@ -849,6 +865,11 @@ header .navbar .link-nav.active-tab:after {
     line-height: 1.5;
     text-align: justify;
   }
+  .sidebar .tags {
+    display: inherit;
+    padding: 0;
+    /*end styles for tags*/
+  }
   .sidebar .tags a {
     display: inline-block;
     position: relative;
@@ -888,5 +909,6 @@ header .navbar .link-nav.active-tab:after {
   .sidebar .tags a:nth-child(3n) {
     margin-right: 0;
   }
+  /*end styles for sidebar*/
 }
 /*end styles for desktops*/

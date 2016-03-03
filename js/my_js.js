@@ -9,6 +9,7 @@ $(document).ready(function() {
 	var foldIcon = '.fold-icon';
 	var tags = '.sidebar .tags';
 	var navTabs = '.nav a';
+	var header = 'header';
 
 	var sidebarContainer = $(sidebar).children();
 
@@ -56,6 +57,34 @@ $(document).ready(function() {
 		$(navTabs).removeClass(activeTab);
 		$(this).toggleClass(activeTab);
 	})
+
+ /*fix navbar on the top of the page on scroll*/
+	$(window).scroll(function(){
+		var header = $('header');
+		var navbar = $('.navbar');
+		var headerHeight = header.height();
+		var scroll = $(window).scrollTop();
+
+		if ( (scroll >= headerHeight) && ($(window).width() > '1024')) {
+			navbar.addClass('fixed');
+			$(nav).addClass('logo-navbar-desktop');
+		}
+		else {
+			navbar.removeClass('fixed');
+			$(nav).removeClass('logo-navbar-desktop');
+		}
+	});
+
+	/*listen size of the window*/
+	$( window ).resize(function() {
+		if ($(window).width() < '1024'){
+			$(nav).removeClass('logo-navbar-desktop');
+		}
+
+		if ($(window).width() < '1024' && $(window).width() > '768') {
+			$(nav).removeClass('logo-navbar-desktop');
+		}
+	});
 
 	/*set class active-tab to tabs from navbar(not fron nav)*/
 	function setClassActiveTab(active) {
