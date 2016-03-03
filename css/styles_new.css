@@ -106,9 +106,6 @@ a {
   top: 0;
   left: 0;
 }
-.logo-navbar-desktop {
-  background: url('../images/logo-navbar-desktop.png') no-repeat 20px;
-}
 /*end styles for helper classes*/
 /*start styles for header*/
 header {
@@ -433,6 +430,9 @@ header .navbar .link-nav.active-tab:after {
   header .navbar {
     border-bottom: none;
   }
+  header .navbar.fixed {
+    background: #6b9acf url('../images/logo-navbar-mobile.png') no-repeat 50%;
+  }
   header .navbar .nav {
     display: none;
     flex-direction: column;
@@ -514,6 +514,9 @@ header .navbar .link-nav.active-tab:after {
   header .navbar {
     display: flex;
     justify-content: space-between;
+  }
+  header .navbar.fixed {
+    background: #6b9acf;
   }
   header .navbar a {
     height: auto;
@@ -713,6 +716,9 @@ header .navbar .link-nav.active-tab:after {
   }
   header .navbar > a {
     display: none;
+  }
+  header .navbar.fixed .nav {
+    background: url('../images/logo-navbar-desktop.png') no-repeat 20px;
   }
   header .navbar .nav {
     width: 980px;

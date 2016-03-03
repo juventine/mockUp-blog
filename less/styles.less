@@ -182,10 +182,6 @@ a {
 	top:0;
 	left:0;
 }
-
-.logo-navbar-desktop {
-	background: url('../images/logo-navbar-desktop.png') no-repeat 20px;
-}
 /*end styles for helper classes*/
 
 /*start styles for header*/
@@ -484,7 +480,10 @@ header {
 	and (max-width: 767px) {
 		header {
 			.navbar {
-					border-bottom: none;
+				border-bottom: none;
+				&.fixed {
+					background: @color_navbar_background url('../images/logo-navbar-mobile.png') no-repeat 50%;
+				}
 				.nav {
 					display: none;
 					flex-direction: column;
@@ -560,6 +559,9 @@ header {
 			.navbar {
 				display: flex;
 				justify-content: space-between;
+				&.fixed {
+					background: @color_navbar_background;
+				}
 				a {
 					height: auto;
 					width: 43px;
@@ -721,6 +723,9 @@ header {
 			display: block;
 			> a {
 				display: none;
+			}
+			&.fixed .nav {
+				background: url('../images/logo-navbar-desktop.png') no-repeat 20px;
 			}
 			.nav {
 				width: 980px;
