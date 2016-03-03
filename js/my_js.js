@@ -9,12 +9,14 @@ $(document).ready(function() {
 	var foldIcon = '.fold-icon';
 	var tags = '.sidebar .tags';
 	var navTabs = '.nav a';
+	var fixedClass = 'fixed';
 
 	var sidebarContainer = $(sidebar).children();
 	var navbar = $('.navbar');
 
 	$(navbarLinks).on('click', function() {
 		var linkClass = $(this).attr('class');
+		var navbarClass = navbar.attr('class');
 		/* check is user click on the active tab or no.
 			 if click on active tab -- ignor action
 		*/
@@ -36,6 +38,10 @@ $(document).ready(function() {
 
 		if (($(window).width() >= '768') && ($(window).width() < '1024')) {
 			$(tags).show();
+		}
+		/*if navbar are fixed on the top of window, move scrollbar on the top of body*/
+		if ((navbarClass.indexOf(fixedClass) != -1)) {
+			$("html, body").animate({ scrollTop: 0 }, "slow");
 		}
 	});
 
