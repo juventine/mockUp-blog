@@ -738,6 +738,7 @@ header .navbar .link-nav.active-tab:after {
   }
   .posts {
     margin-top: 0;
+    padding: 0 16px;
   }
   .post {
     padding: 0 60px;
