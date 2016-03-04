@@ -328,6 +328,7 @@ header .navbar .link-nav.active-tab:after {
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
+  padding: 0 16px;
 }
 .sidebar {
   -webkit-order: 1;
@@ -738,7 +739,6 @@ header .navbar .link-nav.active-tab:after {
   }
   .posts {
     margin-top: 0;
-    padding: 0 16px;
   }
   .post {
     padding: 0 60px;
