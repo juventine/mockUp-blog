@@ -17,7 +17,7 @@ $(document).ready(function() {
 		var linkClass = $(this).attr('class');
 		var navbarClass = navbar.attr('class');
 		/* check is user click on the active tab or no.
-			 if click on active tab -- ignor action
+			if click on active tab -- ignor action
 		*/
 		if ((linkClass.indexOf(activeTab) == -1) && (('.' + linkClass) != linkNav)) {
 			if (($(window).width() <= '767')) {
