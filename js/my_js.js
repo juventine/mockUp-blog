@@ -3,7 +3,6 @@ $(document).ready(function() {
 	var navbarLinks = '.navbar > a';
 	var nav = '.nav';
 	var linkNav = '.link-nav';
-	var display = 'display';
 	var activeTab = 'active-tab';
 	var sidebarTitle = '.title';
 	var foldIcon = '.fold-icon';

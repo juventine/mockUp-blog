@@ -1,4 +1,129 @@
-@import "reset.css";
+/*start reset css*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*end reset css*/
 /* start including of fonts*/
 @font-face {
   font-family: "Arial-Narrow";
@@ -22,10 +147,6 @@
 .paragraph-text {
   line-height: 1.5;
   text-align: justify;
-}
-.tablet-post-aside {
-  width: 86%;
-  padding: 0 7%;
 }
 .border-bottom-post {
   border-bottom: 1px solid #E2E5E8;
@@ -83,21 +204,6 @@ a {
 .sprite {
   background-image: url('../images/spritesheet.png');
   background-repeat: no-repeat;
-}
-.display {
-  display: block;
-}
-.hide {
-  display: none;
-}
-.display.hide {
-  display: none;
-}
-.hide.display {
-  display: block;
-}
-.display-flex {
-  display: flex;
 }
 .fixed {
   position: fixed;
@@ -213,7 +319,6 @@ header .navbar .link-nav.active-tab:after {
 }
 .posts {
   margin-top: 18px;
-  padding: 0 16px;
   order: 2;
 }
 .sidebar {
@@ -347,6 +452,7 @@ header .navbar .link-nav.active-tab:after {
 /*end styles for post-info*/
 /*start styles for aside*/
 .sidebar {
+  display: none;
   width: 100%;
   margin: 0;
   background-color: #e1eefc;
@@ -373,13 +479,12 @@ header .navbar .link-nav.active-tab:after {
 .sidebar p {
   line-height: 1.5;
   text-align: justify;
-  @paragraph _text_mobiles;
 }
 .sidebar .tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 3.5%;
+  padding: 20px 16px;
 }
 .sidebar .tags a {
   margin: 0px 16px 5px 0;
@@ -441,7 +546,7 @@ header .navbar .link-nav.active-tab:after {
   header .navbar .nav li {
     display: flex;
     justify-content: center;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #ffffff;
   }
   header .navbar .nav li:first-child {
     border-top: none;
@@ -481,6 +586,9 @@ header .navbar .link-nav.active-tab:after {
     right: 2px;
     background-image: url('../images/fold.png');
     background-repeat: no-repeat;
+  }
+  .sidebar p {
+    color: #6689a5;
   }
   .sidebar .tags {
     position: relative;
@@ -633,7 +741,7 @@ header .navbar .link-nav.active-tab:after {
     display: block;
     width: 100%;
     padding: 0;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .sidebar section {
     display: none;
