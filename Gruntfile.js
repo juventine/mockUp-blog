@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-            "css/styles_new.css": "less/styles.less"
+            "css/styles.css": "less/styles.less"
           }
       },
     },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         browsers: ['last 2 versions', 'ie 8', 'ie 9']
       },
       no_dest: {
-        src: "css/styles_new.css"
+        src: "css/styles.css"
       }
     }
   });
