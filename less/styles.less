@@ -42,7 +42,6 @@ a {
 
 /*start styles for header*/
 header {
-	width: 100%;
 	.logo {
 		padding: 5px 0 5px 0;
 		text-align: center;
@@ -80,6 +79,9 @@ header {
 			background-color: @color_navbar_link_bg_mobiles;
 			text-transform: uppercase;
 			text-decoration: none;
+			&.about, &.some {
+				color: @color_steel_blue;
+			}
 			&:hover {
 				.hover-nav-link-bg;
 				text-decoration: none;
@@ -127,12 +129,7 @@ header {
 	padding: 0 16px;
 }
 
-.sidebar{
-	order: 1;
-}
-
 .post {
-	width: 100%;
 	position: relative;
 	margin: 0 0 60px;
 	.post-image {
@@ -259,7 +256,7 @@ header {
 /*start styles for aside*/
 .sidebar {
 	display: none;
-	width: 100%;
+	order: 1;
 	margin: 0;
 	background-color: @color_sidebar_bg_mobiles;
 	section {
@@ -431,7 +428,6 @@ header {
 					&.about, &.some {
 						padding: 12px 0;
 						font-size: 20px;
-						color: @color_steel_blue;
 					}
 					&.some {
 						order: 1;
@@ -458,6 +454,7 @@ header {
 		}
 		.posts {
 			margin-top: 0;
+			padding: 0;
 		}
 		.post {
 			padding: 0 60px;
@@ -507,7 +504,6 @@ header {
 /*start styles for sidebar*/
 		.sidebar {
 			display: block;
-			width: 100%;
 			padding: 0;
 			background-color: @color_base;
 			section {
@@ -547,7 +543,6 @@ header {
 				}
 				p {
 					padding: 20px 60px 0;
-					.paragraph-text
 				}
 			}
 			.tags {
@@ -601,13 +596,13 @@ header {
 	.posts {
 		width: 640px;
 		margin: 0 28px 0 0;
+		padding: 0;
 		order: 1;
 	}
 
 	.post {
 		margin: 0 0 39px;
 		.post-image {
-			width: 100%;
 			height: 230px;
 			img {
 				height: 100%;
