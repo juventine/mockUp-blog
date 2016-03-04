@@ -285,19 +285,17 @@ header .navbar a.active-tab:after {
   border-color: #7ca7d9 transparent transparent transparent;
   border-width: 7px 7px 0 7px;
 }
-header .navbar .tags {
-  background-image: url('../images/tag.png');
-  background-repeat: no-repeat;
-  background-position: 5px;
+header .navbar a.tags {
+  background: #7ca7d9 url('../images/tag.png') no-repeat 5px;
 }
-header .navbar .link-nav {
+header .navbar a.link-nav {
   margin-right: 3px;
   background: url('../images/thumbnail.png') no-repeat 5px;
 }
-header .navbar .link-nav.active-tab:before {
+header .navbar a.link-nav.active-tab:before {
   display: none;
 }
-header .navbar .link-nav.active-tab:after {
+header .navbar a.link-nav.active-tab:after {
   content: '';
   width: 0;
   height: 0;
@@ -934,7 +932,6 @@ header .navbar .link-nav.active-tab:after {
     margin: 0 0 39px;
   }
   .post .post-image {
-    width: 100%;
     height: 230px;
   }
   .post .post-image img {
