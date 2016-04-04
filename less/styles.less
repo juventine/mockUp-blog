@@ -70,14 +70,9 @@ header {
 			line-height: 30px;
 			padding: 0;
 			margin: 2px 0 2px 3px;
-			color: @color_base;
-			font-family: "Arial-Narrow";
-			font-size: 18px;
-			text-align: center;
+			.text(@text-align: center, @font-family: 'Arial-Narrow', @font-size: 18px, @color: @color_base, @text-transform: uppercase);
 			vertical-align: middle;
 			background-color: @color_navbar_link_bg_mobiles;
-			text-transform: uppercase;
-			text-decoration: none;
 			&.about, &.some {
 				color: @color_steel_blue;
 			}
@@ -142,13 +137,8 @@ header {
 		a {
 			display: inline-block;
 			line-height: 1.2;
-			text-align: center;
 			word-wrap: break-word;
-			font-family: 'Arial-Narrow',sans-serif;
-			font-size: 20px;
-			letter-spacing: 1px;
-			font-weight: 600;
-			color: @color_post_title;
+			.text(@text-align:center, @font-family: 'Arial-Narrow', @font-size: 20px, @font-weight: 600, @color: @color_post_title, @letter-spacing: 1px);
 			&:hover {
 				text-decoration: underline;
 			}
@@ -211,10 +201,7 @@ header {
 				line-height: 24px;
 				padding: 0 6px 0 0;
 				border-radius: 5px;
-				text-align: right;
-				color: @color_base;
-				font-weight: 800;
-				text-decoration: none;
+				.text(@text-align: right, @font-weight: 800, @color: @color_base);
 				&:hover {
 					background-color: @color-social-links-bg;
 				}
@@ -266,11 +253,7 @@ header {
 			display: inline-block;
 			h2 {
 				padding: 5px 25px 0 0;
-				font-family: 'TrendSansOne';
-				font-size: 17px;
-				font-weight: bold;
-				color: @color_base;
-				text-transform: uppercase;
+				.text(@font-family: 'TrendSansOne', @font-size: 17px, @font-weight: bold, @text-transform: uppercase, @color: @color_aside_title);
 			}
 		}
 	}
@@ -665,19 +648,11 @@ header {
 					height: 23px;
 					line-height: 23px;
 					background: @color_aside_border_tags;
-					color: @color_base;
-					font-weight: bold;
-					font-family: "Arial-Narrow";
-					font-size: 18px;
-					text-align: center;
+					.text(@font-family:"Arial-Narrow", @font-size: 18px, @font-weight: bold, @text-align: center, @color: @color_base);
 				}
 				h2 {
 					padding: 5px 0 1px;
-					font-family: 'TrendSansOne';
-					font-size: 17px;
-					font-weight: bold;
-					color: @color_aside_title;
-					text-transform: uppercase;
+					.text(@font-family: 'TrendSansOne', @font-size: 17px, @font-weight: bold, @text-transform: uppercase, @color: @color_aside_title);
 				}
 			}
 			&.about .title {
