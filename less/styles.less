@@ -82,7 +82,7 @@ header {
 				color: @color_steel_blue;
 			}
 			&:hover {
-				.hover-nav-link-bg;
+				background-color: @color_nav_link_hover;;
 				text-decoration: none;
 			}
 			&.active-tab:before {
@@ -167,7 +167,7 @@ header {
 	display:	flex;
 	align-items: center;
 	height: 38px;
-	.border-bottom-post;
+	border-bottom: 1px solid @color_post_info_border;
 	.wrap-date-author {
 		width: 100%;
 		display: flex;
@@ -442,7 +442,7 @@ header {
 						width: auto;
 						.active-tab;
 						&:hover {
-							.hover-nav-link-bg;
+							background-color: @color_nav_link_hover;
 						}
 					}
 				}
@@ -460,12 +460,12 @@ header {
 				justify-content: start;
 				padding: 10px 0;
 				background-color: inherit;
-				.border-bottom-post;
+				border-bottom: 1px solid @color_post_info_border;;
 			}
 		}
 		/*start styles for post-info*/
 		.post-info {
-			.border-bottom-post;
+			border-bottom: 1px solid @color_post_info_border;;
 			.wrap-date-author {
 				justify-content: start;
 			}
@@ -582,7 +582,7 @@ header {
 					width: auto;
 					margin: 3px 0;
 					&:hover {
-						.hover-nav-link-bg;
+						background-color: @color_nav_link_hover;
 					}
 					.active-tab;
 				}
@@ -608,7 +608,7 @@ header {
 			justify-content: left;
 			padding: 10px 0;
 			background-color: initial;
-			.border-bottom-post;
+			border-bottom: 1px solid @color_post_info_border;
 		}
 		.post-info {
 			justify-content: space-between;
